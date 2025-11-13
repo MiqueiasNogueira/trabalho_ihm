@@ -19,9 +19,6 @@ function Banner_Principal() {
         </button>
       </div>
       
-  
-
-   
     </section>
   );
 }
