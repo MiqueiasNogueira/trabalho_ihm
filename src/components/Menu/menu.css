@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#menu{
+width: 100%;
+max-width: 1050px;
+
+margin: 0 auto;
+padding: 10px 0px 10px 0px;
+
+background: rgba(0, 0, 0, 0.801);
+border-radius: 0px 0px  30px 30px;
+align-items: center;
+
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 10;
+}
+
+#menu-content{
+ align-items: center;
+
+font-size: 17px;
+color: white;
+
+display: flex;
+gap: 70px;
+
+padding: 0px 20px 0px 20px;
+}
+
+ul{
+  align-items: center;
+  list-style: none;
+  display: flex;
+  gap:25px
+  
+}
+
+.btnContato{
+  padding: 10px 52px 10px 52px;
+  border-radius: 0px 0px 18px 0px;
+
+  background:#99FF00;
+  border: solid 3px #FF7B00;
+
+  font-size: 17px;
+
+  color: black;
+}
+
+.icon-sun{
+  font-size: 35px;
+}
+#botoes{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul a{
+  color: white;
+}
+
+button:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Telas médias (tablets) */
+@media (max-width: 1024px){
+  #menu-content{
+    gap: 32px;
+    padding: 10px 16px;
+  }
+  ul{
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .btnContato{
+    padding: 10px 32px;
+    font-size: 16px;
+  }
+  .icon-sun{ font-size: 32px; }
+}
+

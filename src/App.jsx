@@ -1,16 +1,14 @@
 import React from 'react';
-// LINHA REMOVIDA: import Menu from './components/menu/menu.jsx'; 
-import Banner_Principal from './components/banner_principal/banner_principal.jsx';
+import Banner_Principal from "./components/Cabecalho/banner_principal"
+import Menu from "./components/Menu/menu.jsx"
 
 function App() {
   return (
     <div className="site-container">
-      {/* O componente <Menu /> foi removido daqui */}
-      
-      {/* O Banner Principal continua */}
+
+      <Menu />
       <Banner_Principal /> 
       
-      {/* Outros componentes do site virão aqui */}
     </div>
   );
 }

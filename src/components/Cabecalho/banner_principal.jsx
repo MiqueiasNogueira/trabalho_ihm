@@ -1,12 +1,12 @@
 import React from 'react';
-import './Banner_Principal.css'; 
-import CameraImage from '../image/Fundo.png'; 
+import './banner_principal.css'; 
+import banner from '../image/Banner.png'; 
 
 function Banner_Principal() {
   return (
-    <section className="banner-hero">
+    <section id="cabecalho">
       {/*Fundo e a Imagem */}
-      <div className="banner-content-wrapper" style={{ backgroundImage: `url(${CameraImage})` }}>
+      <div className="banner-content-wrapper" style={{ backgroundImage: `url(${banner})` }}>
         
         {/* Ícone de Seta Esquerda (Carrossel) */}
         <button className="banner-slider-arrow left-arrow" aria-label="Slide anterior">
