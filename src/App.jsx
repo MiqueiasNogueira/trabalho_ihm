@@ -5,7 +5,6 @@ import Produtos from "./components/Produtos/produtos.jsx"
 function App() {
   return (
     <div className="site-container">
-
       <Menu />
       <Banner_Principal /> 
       <BarraDesTaque />

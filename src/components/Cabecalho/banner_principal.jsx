@@ -1,4 +1,3 @@
-import React from 'react';
 import './banner_principal.css'; 
 import banner from '../image/Banner.png'; 
 
@@ -18,7 +17,6 @@ function Banner_Principal() {
           &gt;
         </button>
       </div>
-      
     </section>
   );
 }
