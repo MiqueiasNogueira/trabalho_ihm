@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#secao-servicos {
+    background-color: #1A1A1A; 
+    padding: 60px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #FFFFFF;
+}
+
+.servicos{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* ------------------ Header (Título e Botão) ------------------ */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.titulo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #FFFFFF; 
+    margin: 0; 
+}
+
+.ver-mais {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #fcc00f; 
+    color: #dfdcda; 
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.ver-mais:hover {
+    background-color: #000000;
+    color: #fcc00f;
+}
+
+/* ------------------ Grid Container ------------------ */
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    margin: 0 auto;
+}
+
+/* ------------------ Card Individual ------------------ */
+
+.servico-card {
+    padding: 30px;
+    background-color: #1A1A1A; 
+    border: 1px solid #ffffff; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.icone {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #FF6900; 
+}
+
+.servico-card h3 {
+    font-size: 1.3rem;
+    color: #FFFFFF; 
+    margin-bottom: 10px;
+}
+
+.servico-card p {
+    font-size: 0.95rem;
+    color: #BBBBBB; 
+    line-height: 1.5;
+
+    flex-grow: 1; 
+    margin-bottom: 20px;
+}
+
+.servico-cta {
+    color: #FF6900; 
+    text-decoration: none;
+    font-weight: 700;
+
+    margin-top: auto; 
+    transition: color 0.3s;
+}
+
+.servico-cta:hover {
+    color: #FFA500;
+}
+
+/* ------------------ Responsividade ------------------ */
+
+@media (max-width: 1050px) {
+    /* Transição para 2 colunas em telas médias/tablets */
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    /* Transição para 1 coluna em mobile */
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .servicos-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .btn-ver-mais {
+        margin-top: 20px;
+    }
+}
