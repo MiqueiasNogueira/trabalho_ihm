@@ -39,14 +39,13 @@ const Produtos = ({ type = "produtos" }) => {
     { id: 5, title: "HD 1TB para DVR", price: "R$ 250,00" },
   ];
 
-  // escolhe qual lista usar com base no type
   const lista =
     type === "produtos" ? produtos : type === "acessorios" ? acessorios : [];
 
   const ariaLabel =
     type === "produtos"
       ? "Lista de produtos em carrossel"
-      : "Lista de acessorios em carrossel";
+      : "Lista de acessórios em carrossel";
 
   return (
     <section id="fundo">
@@ -55,10 +54,10 @@ const Produtos = ({ type = "produtos" }) => {
           <button
             type="button"
             className="seta seta-esquerda"
-            onClick={() => scroll("right")}
-            aria-label="Próximos acessorios"
+            onClick={() => scroll("left")}
+            aria-label="Itens anteriores"
           >
-            <img src={seta} alt="Seta para a direita" />
+            <img src={seta} alt="Seta para a esquerda" />
           </button>
 
           <div
@@ -79,10 +78,10 @@ const Produtos = ({ type = "produtos" }) => {
           <button
             type="button"
             className="seta seta-direita"
-            onClick={() => scroll("left")}
-            aria-label="acessorios anteriores"
+            onClick={() => scroll("right")}
+            aria-label="Próximos itens"
           >
-            <img src={seta} alt="Seta para a esquerda" />
+            <img src={seta} alt="Seta para a direita" />
           </button>
         </div>
       </div>
