@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+#secao-contato {
+    padding: 40px 30px;
+    background-image: url(src/components/image/fundo-cidade.png);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+
+   
+
+
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+/* Wrapper Principal (Centraliza e Ativa Flexbox) */
+.contato-wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-height: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    flex-wrap: wrap; /* Garante que as colunas empilhem em mobile */
+}
+
+/* ------------------ COLUNA 1: Formulário (Laranja) ------------------ */
+
+.formulario-coluna {
+    flex: 1;
+    background-color: #FF6900; /* Fundo Laranja Característico */
+    padding: 40px;
+    color: #000000; /* Texto em preto sobre o laranja */
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-titulo {
+    /* Estilo de fonte forte e cor do mockup */
+    font-family: 'Saira Stencil One', cursive; 
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000; /* Preto forte */
+    text-shadow: 2px 2px 0px #FFFFFF; /* Sombra branca ou amarela para destaque */
+    margin-bottom: 20px;
+}
+
+/* Container de Inputs (Linhas) */
+.input-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Estilo Base de Inputs e Select */
+.contato-form input, 
+.contato-form select,
+.contato-form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #FFDDAA; /* Fundo Creme/Claro do Input */
+    border: 3px solid #000000;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    color: #1A1A1A;
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+.contato-form textarea {
+    resize: none;
+    margin-bottom: 20px;
+}
+
+/* Estilo para campos com erro */
+.input-error {
+    border-color: red !important;
+}
+
+.error-text {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* ------------------ Botão ENVIAR ------------------ */
+
+.btn-enviar {
+    align-self: flex-end; /* Alinha o botão à direita */
+    padding: 12px 30px;
+    background-color: #FFDDAA; /* Fundo Creme */
+    color: #000000;
+    font-weight: 700;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #FFBB55; /* Laranja mais escuro no hover */
+}
+
+/* ------------------ Status Message ------------------ */
+
+.status-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.status-message.error {
+    background-color: #ffcccc;
+    color: #cc0000;
+}
+.status-message.success {
+    background-color: #ccffcc;
+    color: #008000;
+}
+
+/* ------------------ COLUNA 2: Mapa ------------------ */
+
+.mapa-coluna {
+    flex: 1;
+}
+
+#google-map {
+    width: 100%;
+    height: 100%; /* Ocupa 100% da altura da coluna */
+    min-height: 600px; /* Garante altura mínima para o mapa ser visível */
+}
+
+
+/* ------------------ Responsividade ------------------ */
+
+@media (max-width: 768px) {
+    .contato-wrapper {
+        flex-direction: column; /* Empilha as colunas */
+        min-height: auto;
+    }
+
+    .formulario-coluna {
+        padding: 30px;
+    }
+
+    .input-row {
+        flex-direction: column; /* Empilha Nome e Email no mobile */
+        gap: 0;
+    }
+    
+    .contato-form input,
+    .contato-form select,
+    .contato-form textarea {
+        margin-bottom: 15px;
+    }
+
+    /* Reduz a altura mínima do mapa para caber na tela */
+    #google-map {
+        min-height: 350px; 
+    }
+
+    .btn-enviar {
+        align-self: stretch; /* Botão ocupa 100% da largura em mobile */
+    }
+}
