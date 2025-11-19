@@ -7,7 +7,6 @@ const CabesalhoSection = ({ title }) => {
       <div className="textSection">
         <h1>{title}</h1>
       </div>
-      <div className="teste"></div>
     </section>
   );
 };

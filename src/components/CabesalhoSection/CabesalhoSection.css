@@ -18,4 +18,8 @@
 
 .textSection {
   margin: 0 auto;
+  font-family: "Saira Stencil One", system-ui, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-shadow: 0 4px 0 #ff7a00;
 }
