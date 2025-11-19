@@ -7,6 +7,7 @@ import Grid_Servicos from "../components/Grid_servicos/grid_servicos.jsx";
 import CabecalhoItem from "../components/CabecalhoItems/cabecalhoItems.jsx";
 import "@fontsource/saira-stencil-one";
 import FormularioContato from "../components/Formulario_contato/formulario_contato.jsx";
+import CabesalhoSection from "../components/CabesalhoSection/CabesalhoSection.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Banner_Principal />
       <BarraDesTaque />
       <Quem_Somos />
+      <CabesalhoSection title="NOSSOS PRODUTOS " />;
       <CabecalhoItem title="Camera" />
       <Produtos type="produtos" />
       <CabecalhoItem title="Acessorio" />

@@ -1,113 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
 #secao-quem-somos {
-    /* Fundo Escuro do Mockup */
-    background-color: #151515; 
-    padding: 60px 20px;
-    font-family: 'Arial', sans-serif; 
+  /* Fundo Escuro do Mockup */
+  background-color: #ffffff;
+  padding: 60px 20px;
+  font-family: "Arial", sans-serif;
 }
 
 .quem-somos-container {
-    margin: 0 auto;
-    max-width: 1200px;
-    display: flex;
-    gap: 40px; 
-    align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 .coluna-midia {
-    flex: 1; /* Ocupa a parte menor (proporção 1) */
-    display: flex;
-    justify-content: center;
-    padding: 20px; 
+  flex: 1; /* Ocupa a parte menor (proporção 1) */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
 .imagem-principal {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .coluna {
-    flex: 1.5;
-    align-self: flex-start;
+  flex: 1.5;
+  align-self: flex-start;
 }
 
 .titulo {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #FFFFFF;
-    font-family: 'Saira Stencil One', cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2e2e2e;
+  font-family: "Saira Stencil One", cursive;
 }
 
 .texto p {
-    font-size: 1rem;
-    text-align: justify;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #FFFFFF; 
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #2e2e2e;
 }
 
 .estatisticas {
-    display: flex;
-    justify-content: space-between; 
-    margin-top: 40px;
-    padding-right: 15%; 
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-right: 15%;
 }
 
 .estatistica-item {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .valor {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #FF6900; 
-    line-height: 1;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6900;
+  line-height: 1;
 }
 
 .descricao {
-    font-size: 0.9rem;
-    color: #BBBBBB; 
-    margin-top: 5px;
-    
+  font-size: 0.9rem;
+  color: #2e2e2e;
+  margin-top: 5px;
 }
 
 /* ------------------ Responsividade (Mobile) ------------------ */
 
 @media (max-width: 850px) {
-    .quem-somos-container {
-        flex-direction: column; 
-        gap: 20px;
-    }
-    
-    .coluna-midia {
-        order: 1;
-    }
+  .quem-somos-container {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .coluna {
-        order: 2; 
-        padding-top: 20px;
-    }
-    
-    .titulo {
-        text-align: center;
-    }
+  .coluna-midia {
+    order: 1;
+  }
 
-    .texto p {
-        text-align: left; 
-    }
+  .coluna {
+    order: 2;
+    padding-top: 20px;
+  }
 
-    .estatisticas {
-        justify-content: space-around; 
-        padding-right: 0; /* Remove o recuo */
-    }
+  .titulo {
+    text-align: center;
+  }
+
+  .texto p {
+    text-align: left;
+  }
+
+  .estatisticas {
+    justify-content: space-around;
+    padding-right: 0; /* Remove o recuo */
+  }
 }
