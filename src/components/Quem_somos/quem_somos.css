@@ -13,11 +13,11 @@
 }
 
 .quem-somos-container {
-  margin: 0 auto;
-  max-width: 1200px;
-  display: flex;
-  gap: 40px;
-  align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    gap: 100px; 
+    align-items: center;
 }
 
 .coluna-midia {
