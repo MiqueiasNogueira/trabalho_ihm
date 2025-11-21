@@ -1,0 +1,69 @@
+/* Removi o * { margin: 0 } pois ele quebra o resto do site se não for scoped */
+
+#IconsDestaques {
+  /* Mudei height para min-height para não cortar conteúdo no celular */
+  min-height: 187px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../image/gradFundo1.png");
+  background-size: cover; /* Garante que o fundo cubra tudo */
+  background-position: center;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 9px #ffcc00;
+  border-top: solid 9px #ffcc00;
+  padding: 20px 0; /* Espaço interno para não colar nas bordas no mobile */
+}
+
+.AreaDestaques {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Centraliza os itens na tela */
+  align-items: flex-end; /* Alinha todos pela base do texto/imagem */
+  gap: 40px; /* Espaço consistente entre os itens */
+  flex-wrap: wrap; /* Permite que desça para outra linha no mobile */
+}
+
+.iconsCards {
+  display: flex;
+  flex-direction: column; /* Imagem em cima, texto embaixo */
+  align-items: center;
+  justify-content: flex-end;
+  width: 160px; /* Largura padrão para o cartão */
+  text-align: center;
+  color: #ff741e;
+}
+
+.iconsCards span {
+  margin-top: 15px; /* Espaço entre o ícone e o texto */
+  font-weight: bold;
+  color: wheat; /* Trouxe a cor do seu código original */
+}
+
+/* CLASSE MÁGICA PARA PADRONIZAR OS ÍCONES */
+.icon-img {
+  height: 80px; /* Todos terão a mesma altura */
+  width: auto; /* A largura se ajusta proporcionalmente */
+  max-width: 100%;
+  object-fit: contain; /* Garante que a imagem não estique/deforme */
+  display: block;
+}
+
+/* Responsividade para telas menores (Tablets e Celulares) */
+@media (max-width: 768px) {
+  .AreaDestaques {
+    gap: 20px;
+  }
+
+  .iconsCards {
+    width: 45%; /* No celular, mostra 2 por linha */
+    margin-bottom: 20px;
+  }
+
+  .icon-img {
+    height: 60px; /* Ícones menores no celular */
+  }
+}

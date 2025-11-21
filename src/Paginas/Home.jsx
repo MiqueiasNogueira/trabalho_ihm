@@ -8,13 +8,14 @@ import CabecalhoItem from "../components/CabecalhoItems/cabecalhoItems.jsx";
 import "@fontsource/saira-stencil-one";
 import FormularioContato from "../components/Formulario_contato/formulario_contato.jsx";
 import CabesalhoSection from "../components/CabesalhoSection/CabesalhoSection.jsx";
-
+import InconsDestaques from "../components/InconsDestaques/InconsDestaques.jsx";
 function App() {
   return (
     <div className="site-container">
       <Menu />
       <Banner_Principal />
       <BarraDesTaque />
+      <InconsDestaques />
       <Quem_Somos />
       <CabesalhoSection title="NOSSOS PRODUTOS " />;
       <CabecalhoItem title="Camera" />
