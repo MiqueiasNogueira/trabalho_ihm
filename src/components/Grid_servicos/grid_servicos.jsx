@@ -7,8 +7,13 @@ const Grid_Servicos = () => {
       
       <div className="servicos">
         <header className="header">
-            <h2 className="titulo">NOSSOS SERVIÇOS</h2>
-            <a href="/servicos" className="ver-mais">VER MAIS</a> 
+          <div className="titulo-wrapper">
+                <h2 className="titulo">NOSSOS SERVIÇOS</h2>
+                <p className="subtitulo">
+                    Escolha o serviço ideal e solicite seu orçamento sem compromisso.
+                </p>
+            </div>
+            <a href="/servicos" className="ver-mais">VER MAIS</a>
         </header>
 
         <div className="servicos-grid">

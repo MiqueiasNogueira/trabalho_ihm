@@ -10,7 +10,6 @@ const Quem_Somos = () => {
       {/* Container que irá segurar as duas colunas */}
       <div className="quem-somos-container">
         
-        {/* COLUNA 1: Área de Imagem e Mídia */}
         <div className="coluna-midia">
             <img 
             src={ImagemPrincipal}
@@ -48,9 +47,8 @@ const Quem_Somos = () => {
               <span className="valor">5</span>
               <span className="descricao">Cidades Cobertas</span>
             </div>
-            
           </div>
-          
+           <button className="btn-saiba-mais">SAIBA MAIS</button>
         </div>
       </div>
     </section>
