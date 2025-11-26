@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#secao-faq {
+    background-color: #FFFFFF; /* Fundo branco, conforme o mockup */
+    padding: 120px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #1A1A1A; 
+}
+
+.faq-wrapper {
+    margin: 0 auto;
+    max-width: 800px; /* Largura mais estreita para o FAQ */
+}
+
+.faq-titulo {
+    font-family: 'Saira Stencil One', cursive; 
+    font-weight: 700;
+    text-align: center;
+    color: #1A1A1A; 
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* ------------------ Item de Acordeão Individual ------------------ */
+
+.faq-item {
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden; /* Importante para a animação da resposta */
+}
+
+/* Estilo do Botão da Pergunta */
+.faq-pergunta {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #2e2e2e; /* Fundo escuro do card da pergunta */
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.faq-pergunta:hover {
+    background-color: #3e3e3e; /* Leve escurecimento no hover */
+}
+
+.faq-icone {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1;
+    transition: transform 0.3s;
+}
+
+/* ------------------ Estilo da Resposta ------------------ */
+
+.faq-resposta {
+    /* Altura inicial ZERO, o que faz a mágica da animação de colapso */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out; /* Velocidade da animação */
+    background-color: #1A1A1A; /* Fundo da resposta (Preto escuro) */
+    color: #BBBBBB;
+}
+
+.faq-resposta.aberta {
+    /* Quando o estado 'aberta' é aplicado no JSX, a altura máxima é liberada */
+    max-height: 500px; /* Valor grande o suficiente para a maioria das respostas */
+    padding: 15px 20px;
+    border-top: 1px solid #444444;
+}
+
+.faq-resposta p {
+    margin: 0;
+    line-height: 1.6;
+}

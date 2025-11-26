@@ -9,6 +9,9 @@ import "@fontsource/saira-stencil-one";
 import FormularioContato from "../components/Formulario_contato/formulario_contato.jsx";
 import CabesalhoSection from "../components/CabesalhoSection/CabesalhoSection.jsx";
 import InconsDestaques from "../components/InconsDestaques/InconsDestaques.jsx";
+import DuvidasFrequentes from "../components/Duvidas_frequentes/duvidas_frequentes.jsx";
+import Footer from "../components/Footer/footer.jsx";
+
 function App() {
   return (
     <div className="site-container">
@@ -24,6 +27,8 @@ function App() {
       <Produtos type="acessorios" />
       <Grid_Servicos />
       <FormularioContato />
+      <DuvidasFrequentes />
+      <Footer />
     </div>
   );
 }

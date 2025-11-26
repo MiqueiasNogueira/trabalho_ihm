@@ -3,20 +3,14 @@
   padding: 0;
 }
 
+#fundo-contato {
+    background-repeat: repeat; /* Textura se repete */
+    background-color: #000000; /* Fundo base preto */
+}
 
 #secao-contato {
     padding: 40px 30px;
-    background-image: url('../image/fundo-cidade.png');
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-
-   
-
-
     font-family: 'Arial', sans-serif;
-    min-height: 100vh;
 }
 
 /* Wrapper Principal (Centraliza e Ativa Flexbox) */
@@ -25,7 +19,6 @@
     max-width: 1200px;
     min-height: 600px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-
     display: flex;
     flex-wrap: wrap; /* Garante que as colunas empilhem em mobile */
 }

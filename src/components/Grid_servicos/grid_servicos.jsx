@@ -1,5 +1,6 @@
 import React from 'react';
-import './Grid_Servicos.css'; 
+import './Grid_Servicos.css';
+import IconeCasa from '../image/icons/casa.png';
 
 const Grid_Servicos = () => {
   return (
@@ -18,14 +19,14 @@ const Grid_Servicos = () => {
 
         <div className="servicos-grid">
           <div className="servico-card">
-            <span className="icone">🏠</span> 
+            <img src={IconeCasa} alt="Icone Serviço" className="servico-icone-img" />
             <h3>Instalação Residencial</h3>
             <p>Instalação completa e configuração de sistemas de monitoramento para casas, garantindo a proteção da sua família e do patrimônio.</p>
             <a href="#" className="servico-cta">SOLICITAR SERVIÇO →</a>
           </div>
           
           <div className="servico-card">
-            <span className="icone">🏢</span>
+            <img src={IconeCasa} alt="Icone Serviço" className="servico-icone-img" />
             <h3>Instalação Empresarial</h3>
             <p>Soluções customizadas de CFTV para empresas, escritórios e estabelecimentos comerciais, com foco em monitoramento estratégico.</p>
             <a href="#" className="servico-cta">SOLICITAR SERVIÇO →</a>
@@ -33,7 +34,7 @@ const Grid_Servicos = () => {
           
           {/* Card 3: Manutenção Preventiva */}
           <div className="servico-card">
-            <span className="icone">🛠️</span>
+            <img src={IconeCasa} alt="Icone Serviço" className="servico-icone-img" />
             <h3>Manutenção Preventiva</h3>
             <p>Visitas técnicas periódicas para limpeza, ajuste e verificação de hardware e software, assegurando o funcionamento ininterrupto do seu sistema.</p>
             <a href="#" className="servico-cta">SOLICITAR SERVIÇO →</a>
@@ -41,7 +42,7 @@ const Grid_Servicos = () => {
           
           {/* Card 4: Configuração Remota */}
           <div className="servico-card">
-            <span className="icone">📱</span>
+            <img src={IconeCasa} alt="Icone Serviço" className="servico-icone-img" />
             <h3>Configuração Remota</h3>
             <p>Configuração de acesso via smartphone, tablets e PCs. Permite visualização e controle total das câmeras de qualquer lugar via aplicativo.</p>
             <a href="#" className="servico-cta">SOLICITAR SERVIÇO →</a>
@@ -49,7 +50,7 @@ const Grid_Servicos = () => {
           
           {/* Card 5: Venda De Equipamentos */}
           <div className="servico-card">
-            <span className="icone">🛒</span>
+            <img src={IconeCasa} alt="Icone Serviço" className="servico-icone-img" />
             <h3>Venda De Equipamentos</h3>
             <p>Câmeras, DVRs, NVRs e acessórios de alta qualidade (Full HD, 4K, Wi-Fi). Venda direta com suporte técnico especializado.</p>
             <a href="#" className="servico-cta">SOLICITAR SERVIÇO →</a>
@@ -57,7 +58,7 @@ const Grid_Servicos = () => {
 
           {/* Card 6: Suporte Técnico 24/7 */}
           <div className="servico-card">
-            <span className="icone">📞</span>
+            <img src={IconeCasa} alt="Icone Serviço" className="servico-icone-img" />
             <h3>Suporte Técnico 24/7</h3>
             <p>Atendimento prioritário para resolução rápida de falhas, problemas de conexão ou dúvidas, disponível 24 horas por dia, 7 dias por semana.</p>
             <a href="#" className="servico-cta">SOLICITAR SERVIÇO →</a>

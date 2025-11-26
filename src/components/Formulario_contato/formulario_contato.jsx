@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './formulario_contato.css';
-import '../image/fundo-cidade.png';
-
-/* global google */
-
+import FundoCidade from'../image/fundo-cidade.png';
 
 const FormularioContato = () => {
     const [formData, setFormData] = useState({
@@ -80,35 +77,55 @@ const FormularioContato = () => {
     };
     
   
-    useEffect(() => {
-        const defaultLocation = { lat: -14.227721, lng: -42.619614 }; 
+useEffect(() => {
+        const defaultLocation = { lat: -14.227784, lng: -42.619647 }; // Sua coord. atualizada
         const mapElement = document.getElementById("google-map");
 
-        // Verifica se a API do Google Maps (objeto 'google') foi carregada globalmente
-        if (mapElement && typeof google !== 'undefined') {
-            const map = new google.maps.Map(mapElement, {
-                center: defaultLocation,
-                zoom: 18,
-            });
+        // Função para inicializar o mapa
+        const initializeMap = () => {
+            if (!mapRef.current) {
+                const map = new window.google.maps.Map(mapElement, {
+                    center: defaultLocation,
+                    zoom: 14, // Zoom ajustado
+                });
 
-            mapRef.current = map;
+                mapRef.current = map;
 
-            new google.maps.Marker({
-                position: defaultLocation,
-                map,
-                title: "Localização da MikService"
-            });
+                new window.google.maps.Marker({
+                    position: defaultLocation,
+                    map,
+                    title: "Localização da MikService"
+                });
+            }
+        };
+
+        // 1. Se o Google já estiver pronto, carrega agora.
+        if (window.google && window.google.maps) {
+            initializeMap();
+        } else {
+            // 2. Se não, cria um "vigia" que checa a cada 100ms se o Google chegou
+            const checkGoogle = setInterval(() => {
+                if (window.google && window.google.maps) {
+                    initializeMap();
+                    clearInterval(checkGoogle); // Para de checar quando encontrar
+                }
+            }, 100);
+            
+            // Limpeza do intervalo se o usuário sair da página antes de carregar
+            return () => clearInterval(checkGoogle);
         }
-        
+
+        // Limpeza da memória do mapa
         return () => {
             if (mapRef.current) {
-                // Remove a referência ao objeto do mapa para liberar a memória
                 mapRef.current = null; 
             }
         };
- }, []);
+    }, []);
 
     return (
+        <div id="FundoCidade" style={{ backgroundImage: `url(${FundoCidade})` }}>
+
         <section id="secao-contato">
             <div className="contato-wrapper">
                 <div className="formulario-coluna">
@@ -188,6 +205,7 @@ const FormularioContato = () => {
                 </div>
             </div>
         </section>
+        </div>
     );
 };
 
