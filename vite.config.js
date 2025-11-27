@@ -2,16 +2,16 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 
-const repoName = 'trabalho_ihm'; 
+const repoName = 'trabalho_ihm';
 
 export default defineConfig({
   plugins: [react()],
-  
 
-  base: `/${repoName}/`, 
-  
+
+  base: `/${repoName}/`,
+
   build: {
 
-    outDir: 'docs' 
+    outDir: 'dist'
   }
 });
