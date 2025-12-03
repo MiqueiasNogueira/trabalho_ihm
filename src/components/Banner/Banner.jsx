@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Banner-test.css";
+import "./Banner.css";
 
 import banner1 from "../image/Banner.png";
 import banner2 from "../image/Banner2.png";
