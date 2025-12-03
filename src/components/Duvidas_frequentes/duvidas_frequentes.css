@@ -20,11 +20,10 @@
     font-weight: 700;
     text-align: center;
     color: #1A1A1A; 
-    margin-bottom: 40px;
+    margin-bottom: 90px;
     text-transform: uppercase;
 }
 
-/* ------------------ Item de Acordeão Individual ------------------ */
 
 .faq-item {
     margin-bottom: 10px;
@@ -66,15 +65,16 @@
     /* Altura inicial ZERO, o que faz a mágica da animação de colapso */
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out; /* Velocidade da animação */
+    transition: max-height 0.4s ease, padding 0.3s ease;
     background-color: #1A1A1A; /* Fundo da resposta (Preto escuro) */
     color: #BBBBBB;
+    padding: 0 15px;
 }
 
 .faq-resposta.aberta {
     /* Quando o estado 'aberta' é aplicado no JSX, a altura máxima é liberada */
     max-height: 500px; /* Valor grande o suficiente para a maioria das respostas */
-    padding: 15px 20px;
+    padding: 15px;
     border-top: 1px solid #444444;
 }
 

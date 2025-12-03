@@ -31,16 +31,11 @@ const faqData = [
 ];
 
 const DuvidasFrequentes = () => {
-  // 1. Estado para rastrear o ID do item aberto. null ou 0 para nenhum.
   const [openId, setOpenId] = useState(null); 
-
-  // Função para alternar a abertura do item
   const toggleFAQ = (id) => {
-    // Se o item clicado já estiver aberto, feche-o (null). Caso contrário, abra o novo item.
     setOpenId(openId === id ? null : id);
   };
 
-  // ... (continua na próxima seção: Return JSX) ...
   return (
     <section id="secao-faq">
       
@@ -53,14 +48,13 @@ const DuvidasFrequentes = () => {
           {faqData.map((item) => (
             <div className="faq-item" key={item.id}>
               
-              {/* Botão Clicável da Pergunta */}
               <button 
                 className="faq-pergunta"
                 onClick={() => toggleFAQ(item.id)}
                 aria-expanded={openId === item.id}
-                aria-controls={`resposta-${item.id}`} // A11Y
+                aria-controls={`resposta-${item.id}`} 
               >
-                {/* Texto da Pergunta */}
+
                 <span>{item.pergunta}</span>
                 
                 {/* Ícone de Expansão (Muda dependendo do estado) */}
@@ -69,7 +63,6 @@ const DuvidasFrequentes = () => {
                 </span>
               </button>
               
-              {/* Área da Resposta (Mostra/Esconde com base no estado) */}
               <div 
                 id={`resposta-${item.id}`}
                 className={`faq-resposta ${openId === item.id ? 'aberta' : ''}`}

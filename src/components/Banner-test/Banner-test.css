@@ -1,0 +1,55 @@
+.banner-container {
+  width: 100%;
+  height: 500px;
+  background-color: #FF7800; /* fundo do banner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.banner-content {
+  width: 1400px;
+  height: 500px;
+  position: relative; /* ESSENCIAL */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SETAS */
+.banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: none;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+
+  border: none;       /* remove borda */
+  cursor: pointer;
+  padding: 5px 10px;  /* deixa clicável sem aparecer */
+  transition: 0.2s;
+}
+
+/* Setas fixas NA IMAGEM */
+.left-arrow {
+  left: 15px;
+}
+
+.right-arrow {
+  right: 15px;
+}
+
+/* HOVER */
+.banner-arrow:hover {
+  color: #000;
+  text-shadow: 0 0 4px #000;
+}
