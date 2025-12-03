@@ -71,19 +71,15 @@ const FormularioContato = () => {
             setStatusMessage('Por favor, preencha todos os campos obrigatórios.');
         }
     };
-    
-    // 5. Integração com Google Maps (Lógica de Espera)
-    // ---------------------------------------------------------
-    // LÓGICA DO MAPA COM VERIFICAÇÃO DE CARREGAMENTO
-    // ---------------------------------------------------------
+
     useEffect(() => {
-        const defaultLocation = { lat: -14.227784, lng: -42.619647 }; // Sua localização
+        const defaultLocation = { lat: -14.227784, lng: -42.619647 };
         const mapElement = document.getElementById("google-map");
+        let checkGoogle = null; // Variável para armazenar o ID do intervalo
 
         const initializeMap = () => {
             // Verifica se o elemento existe e se a API já carregou a classe Map
             if (mapElement && window.google && window.google.maps && window.google.maps.Map) {
-                
                 // Evita recriar o mapa se já existir
                 if (!mapRef.current) {
                     const map = new window.google.maps.Map(mapElement, {
@@ -107,25 +103,27 @@ const FormularioContato = () => {
         // Tenta inicializar imediatamente
         if (!initializeMap()) {
             // Se falhar, tenta a cada 100ms até conseguir
-            const checkGoogle = setInterval(() => {
+            checkGoogle = setInterval(() => {
                 if (initializeMap()) {
                     clearInterval(checkGoogle); // Para de tentar quando der certo
                 }
             }, 100);
-
-            // Limpeza do intervalo se o usuário sair da página
-            return () => clearInterval(checkGoogle);
         }
 
-        // Limpeza do mapa ao desmontar
+        // 🚨 FUNÇÃO ÚNICA DE LIMPEZA: Roda na desmontagem do componente
         return () => {
+            // 1. Limpa o Intervalo de Verificação (se ele estiver ativo)
+            if (checkGoogle) {
+                clearInterval(checkGoogle);
+            }
+            // 2. Limpa a Referência do Mapa
             if (mapRef.current) {
                 mapRef.current = null;
             }
         };
     }, []);
 
-    // 6. Renderização (JSX)
+// ----------------------------------------------------------------------
     return (
         <div id="wrapper-fundo" style={{ 
             backgroundImage: `url(${FundoCidade})`,
