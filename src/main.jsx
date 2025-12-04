@@ -1,10 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./Paginas/Home";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* O componente App.jsx é o container de todos os outros componentes */}
-    <App />
+    <BrowserRouter basename="/trabalho_ihm/">
+      <App />
+    </BrowserRouter>
   </StrictMode>
 );

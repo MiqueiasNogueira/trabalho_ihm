@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { LuMoon, LuSun } from "react-icons/lu";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom"; // 1. IMPORTAÇÃO DO LINK
 import logo from "../image/logo.png";
 import "./menu.css";
 
@@ -28,25 +29,24 @@ const Menu = () => {
 
         <ul className={open ? "menu-links open" : "menu-links"}>
           <li>
-            <a href="/">HOME</a>
+            <Link to="/">HOME</Link>{" "}
           </li>
           <li>
-            <a href="/">SOBRE</a>
+            <Link to="/sobre">SOBRE</Link>
           </li>
           <li>
-            <a href="/">PRODUTOS</a>
+            <Link to="/produtos">PRODUTOS</Link>{" "}
           </li>
           <li>
-            <a href="/">SERVIÇOS</a>
+            <Link to="/servicos">SERVIÇOS</Link>{" "}
           </li>
           <li className="item-contato-mobile">
-            <a href="/">CONTATO</a>
+            <Link to="/contato">CONTATO</Link>{" "}
           </li>
         </ul>
-
         <div id="botoes">
           <button className="btnContato">
-            <a href="/">CONTATO</a>
+            <Link to="/contato">CONTATO</Link>{" "}
           </button>
           <LuSun className="icon-sun" />
         </div>
