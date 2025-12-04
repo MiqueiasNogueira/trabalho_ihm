@@ -2,8 +2,8 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../image/gradFundo1.png");
   color: aliceblue;
-  border-top: solid 2px #ff7b00;
-  border-bottom: solid 2px #ff7b00;
+  border-top: solid 5px #ff7b00;
+  border-bottom: solid 5px #ff7b00;
 }
 
 .cabecalho {

@@ -1,0 +1,36 @@
+[33m4884ab1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Finalizando area de depoimentos
+[33m5ca8f6e[m Finalizando area de depoimentos
+[33m9fcc1d0[m trocando outDir para dist - vite.config
+[33ma44a425[m Correcao import- Instagram  - footer
+[33mfe490eb[m Correcao import - footer
+[33mb5f5aba[m Correcoes no import do Grid_Services
+[33m9280da5[m Botton carrossel -correcoes
+[33m86848d7[m Correçoes dos icones e duvidas/footer prontos
+[33m2b412c7[m Correção final do banner
+[33mc2fac77[m Atualizando o banner
+[33md550fee[m COrrigindo bug do git page
+[33mcc70839[m adicionando subtítulo nos serviços e atualizando a responsividade de header
+[33m2672be3[m corrigindo caminhos base e refazendo o build após erro
+[33mb7472fd[m Problema com Borda Branca na responsividade - Resolvido
+[33m5f351af[m Area Icones Destaque - Finalizado
+[33mae7654a[m Merge: Resolve conflito no quem_somos.css
+[33m83ff58e[m Correcoes de detalhes
+[33ma26c523[m Finalizado NOSSOS PRODUTOS
+[33m14b03cc[m Resolve conflitos entre main e origin/main
+[33mcd20e37[m Correcao - direcao rolagem carrossel
+[33ma3a7644[m deploy: Atualiza index.html com API Key e envia novo build do Contato
+[33m17ab028[m feat: Adiciona o componente FormularioContato com validação, Google Maps e correção de memória
+[33m8e17ecd[m fix: Configurando as pages
+[33m9383eb1[m deploy: Versão de produção gerada na pasta docs
+[33madbe95d[m 95% da area dos produtos concluida
+[33md6f05af[m Produtos - Carroceu fucionando
+[33m8d46c38[m feat Partes prontas: Quem_somos/Grid_Serviços
+[33m78af5e5[m iniciando Cards Produtos
+[33me0a6fd2[m Iniciando Cards dos Produtos
+[33mf4bfdbf[m melhorias nos detalhers
+[33m480b47b[m add barra de destaque
+[33m0c92008[m add barra de destaque
+[33m547b6f5[m iniciando Menu
+[33m4fb438e[m fix: Corrige responsividade do banner e ajuste de padding na barra inferior
+[33mf74d829[m feat: [Descreva o que você alterou, ex: Ajustes finais no CSS do banner]
+[33m2f1b9ec[m feat: setup inicial do projeto e componente Banner Principal

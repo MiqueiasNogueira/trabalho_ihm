@@ -9,9 +9,11 @@
   max-width: 1019px;
   height: 76px;
   margin: 0 auto;
-  padding: 5px 0 7px 0;
+  padding: 2px 0 1px 0;
   background: rgba(0, 0, 0, 0.801);
   border-radius: 0 0 30px 30px;
+  border: 2px solid #ff7b00;
+  border-top: none;
   align-items: center;
   position: fixed;
   top: 0;

@@ -11,6 +11,7 @@ import CabesalhoSection from "../components/CabesalhoSection/CabesalhoSection.js
 import InconsDestaques from "../components/InconsDestaques/InconsDestaques.jsx";
 import DuvidasFrequentes from "../components/Duvidas_frequentes/duvidas_frequentes.jsx";
 import Footer from "../components/Footer/footer.jsx";
+import Depoimentos from "../components/Depoimentos/depoimentos.jsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <CabecalhoItem title="Acessorio" />
       <Produtos type="acessorios" />
       <Grid_Servicos />
+      <Depoimentos />
       <FormularioContato />
       <DuvidasFrequentes />
       <Footer />

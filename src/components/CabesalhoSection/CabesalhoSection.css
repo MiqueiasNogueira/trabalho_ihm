@@ -4,20 +4,25 @@
 }
 
 #cabecalhoSection {
-  background: black;
+  background-image: url("../image/gradFundo1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 5px;
   height: 79px;
   max-width: 500px;
   margin: -20px auto;
   border-radius: 50px 50px 0px 0px;
   border: solid 6px #ff7b00;
+  border-bottom: none;
 }
 
 .textSection {
   margin: 0 auto;
+  margin-bottom: 10px;
   font-family: "Saira Stencil One", system-ui, sans-serif;
   text-transform: uppercase;
   font-size: 15px;

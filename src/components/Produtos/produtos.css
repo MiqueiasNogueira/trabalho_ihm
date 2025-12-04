@@ -1,85 +1,61 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-#fundo {
+.secao-produtos {
   background-image: url("../image/gradeFundo.png");
   padding: 32px 0;
+  width: 100%;
 }
 
-#produtos {
-  margin: 0 auto;
-  max-width: 1400px;
-  padding: 16px 0;
-  position: relative;
-  scroll-behavior: smooth;
-}
-
-.carrossel-produtos {
+.container-carrossel {
   max-width: 1135px;
   margin: 0 auto;
   position: relative;
-  display: block;
   padding: 0 30px;
 }
 
-#lista-produtos {
+/* --- Lista com Scroll --- */
+.lista-cards {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
   gap: 14px;
   padding: 20px 10px;
-  max-width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  /* Esconder Scrollbar */
   scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-#lista-produtos .card-produto {
-  flex: 0 0 245px;
-  scroll-snap-align: start;
-}
-
-#lista-produtos::-webkit-scrollbar {
+.lista-cards::-webkit-scrollbar {
   display: none;
 }
 
-.seta {
+/* --- Botões de Navegação (Setas) --- */
+.btn-seta {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   z-index: 10;
-  width: 55px;
-  height: 54px;
-  background: #ffffff00;
+  background: transparent;
   border: none;
-  outline: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s, background 0.2s;
+  width: 55px;
+  transition: transform 0.2s;
 }
 
-.seta img {
-  width: 300px;
-  height: auto;
+.btn-seta img {
+  width: 100%;
+  display: block;
 }
 
 .seta-esquerda {
-  left: 0px;
+  left: 0;
   transform: translateY(-50%) rotate(180deg);
 }
 
 .seta-direita {
-  right: 0px;
-  transform: translateY(-50%);
+  right: 0;
 }
 
-.seta:hover {
+.btn-seta:hover {
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -87,53 +63,19 @@
   transform: translateY(-50%) rotate(180deg) scale(1.1);
 }
 
+/* --- Responsividade --- */
 @media (max-width: 1024px) {
-  .carrossel-produtos {
+  .container-carrossel {
     max-width: 100%;
-  }
-
-  #lista-produtos {
-    padding: 20px 32px;
-  }
-
-  #lista-produtos .card-produto {
-    flex: 0 0 calc((100% - 2 * 14px) / 3);
-    max-width: calc((100% - 2 * 14px) / 3);
-  }
-}
-
-@media (max-width: 768px) {
-  #produtos {
-    padding: 8px 0;
-  }
-
-  #lista-produtos {
-    padding: 20px 28px;
-  }
-
-  #lista-produtos .card-produto {
-    flex: 0 0 calc((100% - 14px) / 2);
-    max-width: calc((100% - 14px) / 2);
-  }
-
-  .seta {
-    width: 55px;
-    height: 55px;
-  }
-
-  .seta img {
-    width: 44px;
   }
 }
 
 @media (max-width: 480px) {
-  #lista-produtos {
-    padding: 20px 24px;
-    gap: 12px;
+  .container-carrossel {
+    padding: 0 10px;
   }
 
-  #lista-produtos .card-produto {
-    flex: 0 0 80%;
-    max-width: 80%;
+  .btn-seta {
+    width: 40px;
   }
 }
