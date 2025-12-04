@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Logo from "../image/logo.png";
 import FundoGrade from "../image/gradeFundo.png";
 import InconeInsta from "../image/icons/Instagram.png";
@@ -9,6 +10,26 @@ import IconeEmail from "../image/icons/Email.png";
 import IconeTell from "../image/icons/Tell.png";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleScrollDuvidas = (e) => {
+    e.preventDefault(); 
+    
+    const targetId = "secao-faq";
+
+      if (location.pathname === "/") {
+        const element = document.getElementById(targetId);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+      } else {
+        navigate("/", { state: { targetId: targetId } });
+    }
+  };
+
+
+
   return (
     <div id="fundo-rodape" style={{ backgroundImage: `url(${FundoGrade})` }}>
       <footer id="rodape">
@@ -21,19 +42,19 @@ const Footer = () => {
             <nav className="footer-nav">
               <ul>
                 <li>
-                  <a href="#">Home</a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <a href="#">Serviços</a>
+                  <Link to="/servicos">Serviços</Link>
                 </li>
                 <li>
-                  <a href="#">Sobre-nos</a>
+                  <Link to="/sobre">Sobre-nos</Link>
                 </li>
                 <li>
-                  <a href="#">Dúvidas</a>
+                  <a href="#secao-faq" onClick={handleScrollDuvidas}>Dúvidas</a>
                 </li>
                 <li>
-                  <a href="#">Contact me</a>
+                  <Link to="/contato">Contact me</Link>
                 </li>
               </ul>
             </nav>

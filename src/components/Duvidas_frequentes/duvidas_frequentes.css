@@ -35,7 +35,7 @@
 .faq-pergunta {
     width: 100%;
     padding: 15px 20px;
-    background-color: #2e2e2e; /* Fundo escuro do card da pergunta */
+    background-color: #000000; /* Fundo escuro do card da pergunta */
     color: #FFFFFF;
     text-align: left;
     font-size: 1rem;

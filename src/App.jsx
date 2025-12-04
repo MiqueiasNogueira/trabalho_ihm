@@ -2,6 +2,7 @@ import Menu from "./components/Menu/menu.jsx";
 import Footer from "./components/Footer/footer.jsx";
 import Home from "./Paginas/Home.jsx";
 import Contato from "./Paginas/Contato.jsx";
+import Sobre from "./Paginas/Sobre.jsx";
 import { Routes, Route } from "react-router-dom";
 import "@fontsource/saira-stencil-one";
 
@@ -11,7 +12,7 @@ function App() {
       <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sobre" element="" />
+        <Route path="/sobre" element={<Sobre />} />
         <Route path="/produtos" element="" />
         <Route path="/servicos" element="" />
         <Route path="/contato" element={<Contato />} />

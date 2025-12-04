@@ -1,3 +1,6 @@
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import Banner from "../components/Banner/Banner.jsx";
 import BarraDesTaque from "../components/Barra_red/barra.js";
 import Produtos from "../components/Produtos/produtos.jsx";
@@ -12,6 +15,21 @@ import Depoimentos from "../components/Depoimentos/depoimentos.jsx";
 import "@fontsource/saira-stencil-one";
 
 function Home() {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.state && location.state.targetId) {
+      const elemento = document.getElementById(location.state.targetId);
+      
+        if (elemento) {
+          setTimeout(() => {
+          elemento.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
+
+
+
   return (
     <div>
       <Banner />

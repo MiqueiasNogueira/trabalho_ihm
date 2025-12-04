@@ -1,6 +1,7 @@
 import React from "react";
 import "./quem_somos.css";
 import ImagemPrincipal from "../image/Membros.png";
+import { Link } from "react-router-dom";
 
 
 const Quem_Somos = () => {
@@ -48,7 +49,9 @@ const Quem_Somos = () => {
               <span className="descricao">Cidades Cobertas</span>
             </div>
           </div>
+          <Link to="/sobre">
            <button className="btn-saiba-mais">SAIBA MAIS</button>
+           </Link>
         </div>
       </div>
     </section>
