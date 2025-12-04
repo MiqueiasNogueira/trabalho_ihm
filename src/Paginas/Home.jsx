@@ -1,4 +1,4 @@
-import Banner_Principal from "../components/Cabecalho/banner_principal.jsx";
+import Banner from "../components/Banner/Banner.jsx";
 import Menu from "../components/Menu/menu.jsx";
 import BarraDesTaque from "../components/Barra_red/barra.js";
 import Produtos from "../components/Produtos/produtos.jsx";
@@ -13,15 +13,16 @@ import DuvidasFrequentes from "../components/Duvidas_frequentes/duvidas_frequent
 import Footer from "../components/Footer/footer.jsx";
 import Depoimentos from "../components/Depoimentos/depoimentos.jsx";
 
+
 function App() {
   return (
     <div className="site-container">
       <Menu />
-      <Banner_Principal />
+      <Banner />
       <BarraDesTaque />
       <InconsDestaques />
       <Quem_Somos />
-      <CabesalhoSection title="NOSSOS PRODUTOS " />;
+      <CabesalhoSection title="NOSSOS PRODUTOS " />
       <CabecalhoItem title="Camera" />
       <Produtos type="produtos" />
       <CabecalhoItem title="Acessorio" />

@@ -8,7 +8,7 @@ import AntenaIcon from "../image/icons/antena.png";
 
 const InconsDestaques = () => {
   return (
-    <sectino>
+    <section>
       <div id="IconsDestaques">
         <div className="AreaDestaques">
           <div className="iconsCards">
@@ -33,7 +33,7 @@ const InconsDestaques = () => {
           </div>
         </div>
       </div>
-    </sectino>
+    </section>
   );
 };
 

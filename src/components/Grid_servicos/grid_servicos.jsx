@@ -10,7 +10,7 @@ const Grid_Servicos = () => {
           <div className="titulo-wrapper">
             <h2 className="titulo">NOSSOS SERVIÇOS</h2>
             <p className="subtitulo">
-              Escolha o serviço ideal e solicite seu orçamento sem compromisso.
+              Escolha o serviço ideal e solicite seu orçamento sem<br /> compromisso.
             </p>
           </div>
           <a href="/servicos" className="ver-mais">
