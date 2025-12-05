@@ -3,8 +3,8 @@ import CardProdutos from "./Card_Produto/cardProdutos.jsx";
 import setaImg from "../image/setas/esquerdo.png";
 import "./produtos.css";
 
-// Dados constantes (idealmente viriam de uma API ou arquivo separado)
-const DADOS = {
+// 1. Estrutura de DADOS Original (Simplificada para uso interno)
+const DADOS_ORIGINAL = {
   produtos: {
     label: "Produtos",
     itens: [
@@ -13,6 +13,8 @@ const DADOS = {
       { id: 3, title: "Câmera Noturna", price: "R$ 120,00" },
       { id: 4, title: "Câmera 360°", price: "R$ 150,00" },
       { id: 5, title: "Kit Câmeras", price: "R$ 500,00" },
+      { id: 6, title: "Kit Câmeras", price: "R$ 500,00" },
+      { id: 7, title: "Kit Câmeras", price: "R$ 500,00" },
     ],
   },
   acessorios: {
@@ -23,20 +25,46 @@ const DADOS = {
       { id: 3, title: "Conector BNC", price: "R$ 5,00" },
       { id: 4, title: "Suporte Câmera", price: "R$ 25,00" },
       { id: 5, title: "HD 1TB DVR", price: "R$ 250,00" },
+      { id: 6, title: "HD 1TB DVR", price: "R$ 250,00" },
+      { id: 7, title: "HD 1TB DVR", price: "R$ 250,00" },
     ],
   },
 };
 
-const Produtos = ({ type = "produtos" }) => {
+const produtosItens = DADOS_ORIGINAL.produtos.itens;
+
+const acessoriosItens = DADOS_ORIGINAL.acessorios.itens.map((item) => ({
+  ...item,
+  id: item.id + produtosItens.length,
+}));
+
+const todosItens = [...produtosItens, ...acessoriosItens];
+
+const DADOS_FINAL = {
+  produtos: DADOS_ORIGINAL.produtos,
+  acessorios: {
+    label: DADOS_ORIGINAL.acessorios.label,
+    itens: acessoriosItens,
+  },
+  todos: {
+    label: "Todos",
+    itens: todosItens,
+  },
+};
+
+const Produtos = ({
+  type = "produtos",
+  semFundo = false,
+  isCarrossel = true,
+}) => {
   const listaRef = useRef(null);
 
-  // Seleciona a categoria correta ou retorna array vazio para evitar erros
-  const categoriaAtual = DADOS[type] || { label: "Lista", itens: [] };
+  // Usa a chave 'type' (ex: "produtos", "acessorios" ou "todos") no DADOS_FINAL
+  const categoriaAtual = DADOS_FINAL[type] || { label: "Lista", itens: [] };
 
   const rolarLista = (direcao) => {
     if (!listaRef.current) return;
 
-    // Valor fixo aproximado (largura card + gap) para performance
     const DESLOCAMENTO = 266;
 
     listaRef.current.scrollBy({
@@ -45,21 +73,30 @@ const Produtos = ({ type = "produtos" }) => {
     });
   };
 
+  const sectionClasses = `secao-produtos ${semFundo ? "sem-fundo" : ""}`;
+  const listClasses = isCarrossel ? "lista-cards" : "lista-grid";
+
   return (
-    <section className="secao-produtos">
+    <section className={sectionClasses}>
       <div
         className="container-carrossel"
-        aria-label={`Carrossel de ${categoriaAtual.label}`}
+        aria-label={`Lista de ${categoriaAtual.label}`}
       >
-        <button
-          className="btn-seta seta-esquerda"
-          onClick={() => rolarLista("esquerda")}
-          aria-label="Anterior"
-        >
-          <img src={setaImg} alt="" />
-        </button>
+        {isCarrossel && (
+          <button
+            className="btn-seta seta-esquerda"
+            onClick={() => rolarLista("esquerda")}
+            aria-label="Anterior"
+          >
+            <img src={setaImg} alt="" />
+          </button>
+        )}
 
-        <div className="lista-cards" ref={listaRef} role="list">
+        <div
+          className={listClasses}
+          ref={isCarrossel ? listaRef : null}
+          role="list"
+        >
           {categoriaAtual.itens.map((item) => (
             <CardProdutos
               key={item.id}
@@ -69,13 +106,15 @@ const Produtos = ({ type = "produtos" }) => {
           ))}
         </div>
 
-        <button
-          className="btn-seta seta-direita"
-          onClick={() => rolarLista("direita")}
-          aria-label="Próximo"
-        >
-          <img src={setaImg} alt="" />
-        </button>
+        {isCarrossel && (
+          <button
+            className="btn-seta seta-direita"
+            onClick={() => rolarLista("direita")}
+            aria-label="Próximo"
+          >
+            <img src={setaImg} alt="" />
+          </button>
+        )}
       </div>
     </section>
   );

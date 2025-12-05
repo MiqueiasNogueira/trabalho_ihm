@@ -1,5 +1,6 @@
 #produtosPages {
   max-width: 1050px;
+  min-height: 200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -42,7 +43,7 @@
 }
 #filtro span {
   text-align: right;
-  margin-left: 70px;
+  margin-left: 45px;
 }
 
 @media (max-width: 768px) {
