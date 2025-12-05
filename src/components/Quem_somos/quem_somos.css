@@ -8,7 +8,7 @@
 
 #secao-quem-somos {
   background-color: #ffffff;
-  padding: 60px 20px;
+  padding: 80px 20px;
   font-family: "Arial", sans-serif;
 }
 
@@ -50,14 +50,14 @@
   font-size: 1rem;
   text-align: justify;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #2e2e2e;
 }
 
 .estatisticas {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 20px;
   width: 100%;
 }
 
@@ -82,7 +82,7 @@
 
 .btn-saiba-mais {
   width: 100%;
-  padding: 15px 10px;
+  padding: 15px;
   margin-top: 40px;
   display: block;
   clear: both;
@@ -94,7 +94,7 @@
   text-transform: uppercase;
 
   border: 3px solid #ff7b00;
-  border-radius: 8px;
+  border-radius: 3px;
   cursor: pointer;
   box-shadow: 0 6px 0 0 #ff6900;
 }
@@ -133,5 +133,3 @@
     margin-top: 25px;
   }
 }
-
-/* Global, afeta todos inputs number */
