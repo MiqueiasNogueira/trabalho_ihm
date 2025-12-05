@@ -1,0 +1,15 @@
+#topPages {
+  text-align: center;
+  background: #ff7b00;
+  height: 180px;
+}
+#topPages img {
+  height: 119px;
+  width: 100%;
+  margin: 0;
+}
+#topTitle {
+  font-size: 30px;
+  font-family: "Saira Stencil One", system-ui, sans-serif;
+  color: white;
+}

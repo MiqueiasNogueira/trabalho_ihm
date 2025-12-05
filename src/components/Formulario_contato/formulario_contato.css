@@ -1,180 +1,177 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
 #fundo-contato {
-    background-repeat: repeat; /* Textura se repete */
-    background-color: #000000; /* Fundo base preto */
+  background-repeat: repeat; /* Textura se repete */
+  background-color: #000000; /* Fundo base preto */
 }
 
 #secao-contato {
-    padding: 40px 30px;
-    font-family: 'Arial', sans-serif;
-    
+  padding: 40px 30px;
+  font-family: "Arial", sans-serif;
+  align-content: center;
 }
 
 /* Wrapper Principal (Centraliza e Ativa Flexbox) */
 .contato-wrapper {
-    margin: 0 auto;
-    max-width: 1200px;
-    min-height: 600px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-wrap: wrap; /* Garante que as colunas empilhem em mobile */
-    border: 6px solid black;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 600px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-wrap: wrap; /* Garante que as colunas empilhem em mobile */
+  border: 6px solid black;
 }
 
 /* ------------------ COLUNA 1: Formulário (Laranja) ------------------ */
 
 .formulario-coluna {
-    flex: 1;
-    background-color: #FF6900; /* Fundo Laranja Característico */
-    padding: 40px;
-    color: #000000; /* Texto em preto sobre o laranja */
-    
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  background-color: #ff6900; /* Fundo Laranja Característico */
+  padding: 40px;
+  color: #000000; /* Texto em preto sobre o laranja */
+
+  display: flex;
+  flex-direction: column;
 }
 
 .formulario-titulo {
-    /* Estilo de fonte forte e cor do mockup */
-    font-family: 'Saira Stencil One', cursive; 
-    font-size: 3rem;
-    font-weight: 700;
-    color: #000000; /* Preto forte */
-    text-shadow: 2px 2px 0px #FFFFFF; /* Sombra branca ou amarela para destaque */
-    margin-bottom: 20px;
+  /* Estilo de fonte forte e cor do mockup */
+  font-family: "Saira Stencil One", cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000; /* Preto forte */
+  text-shadow: 2px 2px 0px #ffffff; /* Sombra branca ou amarela para destaque */
+  margin-bottom: 20px;
 }
 
 /* Container de Inputs (Linhas) */
 .input-row {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
 /* Estilo Base de Inputs e Select */
-.contato-form input, 
+.contato-form input,
 .contato-form select,
 .contato-form textarea {
-    width: 100%;
-    padding: 12px;
-    background-color: #FFDDAA; /* Fundo Creme/Claro do Input */
-    border: 3px solid #000000;
-    border-radius: 5px;
-    outline: none;
-    font-size: 1rem;
-    color: #1A1A1A;
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
+  width: 100%;
+  padding: 12px;
+  background-color: #ffddaa; /* Fundo Creme/Claro do Input */
+  border: 3px solid #000000;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  color: #1a1a1a;
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
 }
 
 .contato-form textarea {
-    resize: none;
-    margin-bottom: 20px;
+  resize: none;
+  margin-bottom: 20px;
 }
 
 /* Estilo para campos com erro */
 .input-error {
-    border-color: red !important;
+  border-color: red !important;
 }
 
 .error-text {
-    color: red;
-    font-size: 0.9rem;
-    margin-top: -10px;
-    margin-bottom: 15px;
-    display: block;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  display: block;
 }
 
 /* ------------------ Botão ENVIAR ------------------ */
 
 .btn-enviar {
-    align-self: flex-end; /* Alinha o botão à direita */
-    padding: 12px 30px;
-    background-color: #FFDDAA; /* Fundo Creme */
-    color: #000000;
-    font-weight: 700;
-    border: 3px solid #000000;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+  align-self: flex-end; /* Alinha o botão à direita */
+  padding: 12px 30px;
+  background-color: #ffddaa; /* Fundo Creme */
+  color: #000000;
+  font-weight: 700;
+  border: 3px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
 .btn-enviar:hover {
-    background-color: #FFBB55; /* Laranja mais escuro no hover */
+  background-color: #ffbb55; /* Laranja mais escuro no hover */
 }
 
 /* ------------------ Status Message ------------------ */
 
 .status-message {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    text-align: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
 }
 .status-message.error {
-    background-color: #ffcccc;
-    color: #cc0000;
+  background-color: #ffcccc;
+  color: #cc0000;
 }
 .status-message.success {
-    background-color: #ccffcc;
-    color: #008000;
+  background-color: #ccffcc;
+  color: #008000;
 }
 
 /* ------------------ COLUNA 2: Mapa ------------------ */
 
 .mapa-coluna {
-flex: 1;
-min-height: 500px; /* 👈 OBRIGATÓRIO */
-display: flex;
+  flex: 1;
+  min-height: 500px; /* 👈 OBRIGATÓRIO */
+  display: flex;
 }
 
-
 #google-map {
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    min-height: 500px;
-    background-color: #eee;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  background-color: #eee;
 }
 
 #google-map[style] {
-    height: 100% !important;
+  height: 100% !important;
 }
-
-
 
 /* ------------------ Responsividade ------------------ */
 
 @media (max-width: 768px) {
-    .contato-wrapper {
-        flex-direction: column; /* Empilha as colunas */
-        min-height: auto;
-    }
+  .contato-wrapper {
+    flex-direction: column; /* Empilha as colunas */
+    min-height: auto;
+  }
 
-    .formulario-coluna {
-        padding: 30px;
-    }
+  .formulario-coluna {
+    padding: 30px;
+  }
 
-    .input-row {
-        flex-direction: column; /* Empilha Nome e Email no mobile */
-        gap: 0;
-    }
-    
-    .contato-form input,
-    .contato-form select,
-    .contato-form textarea {
-        margin-bottom: 15px;
-    }
+  .input-row {
+    flex-direction: column; /* Empilha Nome e Email no mobile */
+    gap: 0;
+  }
 
-    /* Reduz a altura mínima do mapa para caber na tela */
-    #google-map {
-        min-height: 350px; 
-    }
+  .contato-form input,
+  .contato-form select,
+  .contato-form textarea {
+    margin-bottom: 15px;
+  }
 
-    .btn-enviar {
-        align-self: stretch; /* Botão ocupa 100% da largura em mobile */
-    }
+  /* Reduz a altura mínima do mapa para caber na tela */
+  #google-map {
+    min-height: 350px;
+  }
+
+  .btn-enviar {
+    align-self: stretch; /* Botão ocupa 100% da largura em mobile */
+  }
 }

@@ -5,6 +5,7 @@ import Contato from "./Paginas/Contato.jsx";
 import Sobre from "./Paginas/Sobre.jsx";
 import { Routes, Route } from "react-router-dom";
 import "@fontsource/saira-stencil-one";
+import Produtos from "./Paginas/Produtos.jsx";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sobre" element={<Sobre />} />
-        <Route path="/produtos" element="" />
+        <Route path="/produtos" element={<Produtos />} />
         <Route path="/servicos" element="" />
         <Route path="/contato" element={<Contato />} />
       </Routes>
