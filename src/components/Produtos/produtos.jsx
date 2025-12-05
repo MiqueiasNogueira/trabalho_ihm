@@ -57,14 +57,11 @@ const Produtos = ({
   isCarrossel = true,
 }) => {
   const listaRef = useRef(null);
-
   const categoriaAtual = DADOS_FINAL[type] || { label: "Lista", itens: [] };
 
   const rolarLista = (direcao) => {
     if (!listaRef.current) return;
-
     const DESLOCAMENTO = 266;
-
     listaRef.current.scrollBy({
       left: direcao === "esquerda" ? -DESLOCAMENTO : DESLOCAMENTO,
       behavior: "smooth",
@@ -100,10 +97,6 @@ const Produtos = ({
               key={item.id}
               titulo={item.title}
               preco={item.price}
-              cardWidth="350px"
-              cardShadow="none"
-              imgHeight="300px"
-              cardGap="20px"
             />
           ))}
         </div>

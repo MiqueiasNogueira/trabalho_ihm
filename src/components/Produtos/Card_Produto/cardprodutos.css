@@ -61,3 +61,61 @@
 .btn-comprar:hover {
   opacity: 0.9;
 }
+
+.lista-grid .card-produto {
+  width: 90%;
+  max-width: 260px;
+  flex: none;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .lista-grid .card-produto {
+    height: auto;
+    min-height: 0;
+    max-width: none;
+  }
+
+  .lista-grid .card-produto img {
+    width: 100%;
+    height: auto;
+    max-height: 110px;
+    object-fit: contain;
+    margin-bottom: 2px;
+  }
+
+  .lista-grid .card-corpo {
+    padding: 8px 10px 12px 10px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .lista-grid .card-corpo h3 {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.2;
+    width: 100%;
+  }
+
+  .lista-grid .card-corpo span {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    width: 100%;
+    display: block;
+  }
+
+  .lista-grid .btn-comprar {
+    margin-top: 10px;
+    width: 90%;
+    max-width: 140px;
+    height: 32px;
+    font-size: 12px;
+    border-width: 2px;
+    margin-right: 20px;
+  }
+}
