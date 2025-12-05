@@ -4,14 +4,18 @@
   width: 100%;
 }
 
+.secao-produtos.sem-fundo {
+  background-image: none;
+  background-color: transparent;
+}
+
 .container-carrossel {
-  max-width: 1135px;
+  max-width: 1070px;
   margin: 0 auto;
   position: relative;
   padding: 0 30px;
 }
 
-/* --- Lista com Scroll --- */
 .lista-cards {
   display: flex;
   gap: 14px;
@@ -19,7 +23,6 @@
   overflow-x: auto;
   scroll-behavior: smooth;
 
-  /* Esconder Scrollbar */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -28,7 +31,14 @@
   display: none;
 }
 
-/* --- Botões de Navegação (Setas) --- */
+.lista-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 14px;
+  overflow-x: visible;
+  padding: 20px 10px;
+}
+
 .btn-seta {
   position: absolute;
   top: 50%;
@@ -63,7 +73,6 @@
   transform: translateY(-50%) rotate(180deg) scale(1.1);
 }
 
-/* --- Responsividade --- */
 @media (max-width: 1024px) {
   .container-carrossel {
     max-width: 100%;
