@@ -1,7 +1,9 @@
 .linha {
-  border-bottom: 2px solid #000000;
-  margin-top: 10px;
+  border-bottom-style: solid;
+  border-bottom-color: #000000;
+  height: 0px;
 }
+
 #divisor {
   max-width: 1066px;
   margin: 0 auto;

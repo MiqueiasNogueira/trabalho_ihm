@@ -33,8 +33,14 @@ function ProdutoPages() {
           </span>
         </section>
       </main>
-      <Divisor />
-      <Produtos type="todos" isCarrossel={false} semFundo={true} /> <Divisor />
+      <Divisor marginTop="50px" marginBottom="" />
+      <Produtos type="todos" isCarrossel={false} semFundo={true} />
+      <Divisor
+        marginTop="0px"
+        marginBottom="100px"
+        tamanho="100%"
+        espessura="1px"
+      />
     </div>
   );
 }
