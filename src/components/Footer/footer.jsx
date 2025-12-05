@@ -100,7 +100,7 @@ const Footer = () => {
               </div>
               <div className="contato-item">
                 <img src={IconeTell} alt="Telefone" className="contato-img" />
-                <span> (77) 9 8159-7626</span>
+                <span> (77) 9 8159-7616</span>
               </div>
             </div>
           </div>

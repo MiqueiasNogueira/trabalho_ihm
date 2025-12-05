@@ -5,7 +5,7 @@
 
 #secao-servicos {
   background-color: #ffffff;
-  padding: 60px 20px;
+  padding: 90px 20px;
   font-family: "Arial", sans-serif;
   color: #000000;
 }
@@ -15,13 +15,12 @@
   max-width: 1200px;
 }
 
-/* ------------------ Header (Título e Botão) ------------------ */
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .titulo-wrapper {
@@ -59,16 +58,12 @@
   color: #fcc00f;
 }
 
-/* ------------------ Grid Container ------------------ */
-
 .servicos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin: 0 auto;
 }
-
-/* ------------------ Card Individual ------------------ */
 
 .servico-card {
   padding: 30px;
@@ -80,29 +75,24 @@
   flex-direction: column;
 }
 
-/* No lugar de .icone, use: */
-
 .servico-icone-img {
-    width: 50px;  /* Ajuste o tamanho conforme necessário (ex: 40px a 60px) */
+    width: 50px;
     height: 50px;
-    object-fit: contain; /* Garante que o ícone não fique distorcido */
-    margin-bottom: 15px; /* Espaço entre o ícone e o título */
-    display: block; /* Garante que fique em linha própria se necessário */
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
 .servico-card h3 {
   font-size: 1.3rem;
   color: #000000;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .servico-card p {
   font-size: 0.95rem;
-  color: #bbbbbb;
+  color: #6b6868;
   line-height: 1.5;
-
   flex-grow: 1;
-  margin-bottom: 20px;
 }
 
 .servico-cta {
@@ -121,14 +111,12 @@
 /* ------------------ Responsividade ------------------ */
 
 @media (max-width: 1050px) {
-  /* Transição para 2 colunas em telas médias/tablets */
   .servicos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 650px) {
-  /* Transição para 1 coluna em mobile */
   .servicos-grid {
     grid-template-columns: 1fr;
   }

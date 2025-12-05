@@ -34,13 +34,13 @@ const Quem_Somos = () => {
             {/* Item 1 */}
             <div className="estatistica-item">
               <span className="valor">10.000</span>
-              <span className="descricao">Clientes Atendidos</span>
+              <span className="descricao">Clientes <br /> Atendidos</span>
             </div>
             
             {/* Item 2 */}
             <div className="estatistica-item">
               <span className="valor">12.000</span>
-              <span className="descricao">Serviços Prestados</span>
+              <span className="descricao">Serviços <br /> Prestados</span>
             </div>
             
             {/* Item 3 */}

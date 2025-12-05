@@ -25,22 +25,16 @@ function ProdutoPages() {
               <option value="all">TODOS</option>
               <option value="produto">CAMERAS</option>
               <option value="acessorio">ACESSORIOS</option>
-            </select>{" "}
+            </select>
           </form>
           <span className="titleProdutos">
-            {" "}
             <strong>30</strong> Modelos disponíveis
           </span>
         </section>
       </main>
-      <Divisor marginTop="50px" marginBottom="" />
+      <Divisor marginTop="10px" marginBottom="" />
       <Produtos type="todos" isCarrossel={false} semFundo={true} />
-      <Divisor
-        marginTop="0px"
-        marginBottom="100px"
-        tamanho="100%"
-        espessura="1px"
-      />
+      <Divisor marginBottom="100px" tamanho="100%" espessura="1px" />
     </div>
   );
 }

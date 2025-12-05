@@ -6,6 +6,12 @@ import banner2 from "../image/Banner2.png";
 
 export default function Banner() {
   const images = [banner1, banner2];
+
+  const colors = [
+    "linear-gradient(90deg, rgb(257, 80, 0) 0%, rgb(257, 200,0) 60%, rgb(250, 105, 0) 100%)",  
+    "linear-gradient(90deg, rgb(140, 140, 140) 0%, rgb(210, 210, 210) 60%, rgb(180, 180, 180) 100%"    // banner cinza claro
+  ];
+
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
@@ -17,7 +23,10 @@ export default function Banner() {
   };
 
   return (
-    <div className="banner-container">
+    <div
+      className="banner-container"
+      style={{ background: colors[current] }}
+    >
       <div className="banner-content">
         <img
           src={images[current]}

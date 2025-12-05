@@ -3,8 +3,7 @@ import "./formulario_contato.css";
 import FundoCidade from "../image/fundo-cidade.png";
 
 const FormularioContato = () => {
-  // 1. Estados do Formulário
-  const [formData, setFormData] = useState({
+  const [dados, setDados] = useState({
     nome: "",
     email: "",
     telefone: "",
@@ -12,238 +11,181 @@ const FormularioContato = () => {
     mensagem: "",
   });
 
-  const [errors, setErrors] = useState({});
-  const [statusMessage, setStatusMessage] = useState("");
-
-  // Referência para guardar o mapa e não recriar a cada renderização
+  const [erros, setErros] = useState({});
   const mapRef = useRef(null);
 
-  // 2. Lógica de Atualização dos Campos
-  const handleChange = (e) => {
+  const alterar = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setDados({ ...dados, [name]: value });
 
-    // Limpa o erro ao digitar
-    if (errors[name]) {
-      setErrors({ ...errors, [name]: null });
+    if (erros[name]) {
+      setErros({ ...erros, [name]: null });
     }
   };
 
-  // 3. Validação
-  const validate = () => {
-    let currentErrors = {};
-    let isValid = true;
+const validar = () => {
+  const errosTemp = {};
+  let valido = true;
 
-    if (!formData.nome.trim()) {
-      currentErrors.nome = "O nome é obrigatório.";
-      isValid = false;
-    }
-    if (!formData.email.trim()) {
-      currentErrors.email = "O e-mail é obrigatório.";
-      isValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      currentErrors.email = "E-mail inválido.";
-      isValid = false;
-    }
-    if (!formData.telefone.trim()) {
-      currentErrors.telefone = "O telefone é obrigatório.";
-      isValid = false;
-    }
-    if (!formData.mensagem.trim()) {
-      currentErrors.mensagem = "Os detalhes são obrigatórios.";
-      isValid = false;
-    }
+  // Nome
+  if (!dados.nome.trim()) {
+    errosTemp.nome = "Digite seu nome.";
+    valido = false;
+  }
 
-    setErrors(currentErrors);
-    return isValid;
-  };
+  // Email
+  if (!dados.email.trim()) {
+    errosTemp.email = "Digite seu e-mail.";
+    valido = false;
+  } else if (!/\S+@\S+\.\S+/.test(dados.email)) {
+    errosTemp.email = "E-mail inválido.";
+    valido = false;
+  }
 
-  // 4. Envio do Formulário
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validate()) {
-      console.log("Dados Enviados:", formData);
-      setStatusMessage(
-        "Mensagem enviada com sucesso! Em breve entraremos em contato."
-      );
-      setFormData({
-        nome: "",
-        email: "",
-        telefone: "",
-        servico: "",
-        mensagem: "",
-      });
-    } else {
-      setStatusMessage("Por favor, preencha todos os campos obrigatórios.");
+  // Telefone
+  if (!dados.telefone.trim()) {
+    errosTemp.telefone = "Digite seu telefone.";
+    valido = false;
+  }
+
+  // Mensagem
+  if (!dados.mensagem.trim()) {
+    errosTemp.mensagem = "Escreva sua mensagem.";
+    valido = false;
+  }
+
+  setErros(errosTemp);
+  return valido;
+};
+
+
+  const enviar = (e) => {
+    if (!validar()) {
+      e.preventDefault();
+      return;
     }
   };
 
+  // MAPA
   useEffect(() => {
-    const defaultLocation = { lat: -14.227784, lng: -42.619647 };
-    const mapElement = document.getElementById("google-map");
-    let checkGoogle = null; // Variável para armazenar o ID do intervalo
+    const local = { lat: -14.227784, lng: -42.619647 };
+    const element = document.getElementById("mapa");
 
-    const initializeMap = () => {
-      // Verifica se o elemento existe e se a API já carregou a classe Map
-      if (
-        mapElement &&
-        window.google &&
-        window.google.maps &&
-        window.google.maps.Map
-      ) {
-        // Evita recriar o mapa se já existir
+    let tentar = setInterval(() => {
+      if (element && window.google?.maps?.Map) {
+        clearInterval(tentar);
+
         if (!mapRef.current) {
-          const map = new window.google.maps.Map(mapElement, {
-            center: defaultLocation,
+          const mapa = new window.google.maps.Map(element, {
+            center: local,
             zoom: 15,
           });
 
-          mapRef.current = map;
-
           new window.google.maps.Marker({
-            position: defaultLocation,
-            map,
-            title: "Localização da MikService",
+            position: local,
+            map: mapa,
+            title: "Localização",
           });
-        }
-        return true; // Sucesso
-      }
-      return false; // Ainda não carregou
-    };
 
-    // Tenta inicializar imediatamente
-    if (!initializeMap()) {
-      // Se falhar, tenta a cada 100ms até conseguir
-      checkGoogle = setInterval(() => {
-        if (initializeMap()) {
-          clearInterval(checkGoogle); // Para de tentar quando der certo
+          mapRef.current = mapa;
         }
-      }, 100);
-    }
+      }
+    }, 120);
 
-    return () => {
-      if (checkGoogle) {
-        clearInterval(checkGoogle);
-      }
-      // 2. Limpa a Referência do Mapa
-      if (mapRef.current) {
-        mapRef.current = null;
-      }
-    };
+    return () => clearInterval(tentar);
   }, []);
 
-  // ----------------------------------------------------------------------
   return (
     <div
-      id="wrapper-fundo"
+      id="fundo"
       style={{
         backgroundImage: `url(${FundoCidade})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
-        width: "100%",
-        height: "777px",
       }}
     >
-      <section id="secao-contato">
-        <div className="contato-wrapper">
-          {/* Coluna Esquerda: Formulário */}
-          <div className="formulario-coluna">
-            <h2 className="formulario-titulo">Contato</h2>
+      <section id="contato-secao">
+        <div className="contato-caixa">
+          {/* FORMULÁRIO */}
+          <div className="coluna-form">
+            <h2 className="titulo-form">Contato</h2>
 
-            {statusMessage && (
-              <p
-                className={`status-message ${
-                  Object.keys(errors).length === 0 ? "success" : "error"
-                }`}
-              >
-                {statusMessage}
-              </p>
-            )}
+            <form
+              action="https://formsubmit.co/miqueiasnogueirasantos567@gmail.com"
+              method="POST"
+              onSubmit={enviar}
+              className="form"
+            >
+              {/* Anti-spam obrigatório no FormSubmit */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="Novo contato do site!" />
+              <input type="hidden" name="_template" value="box" />
 
-            <form onSubmit={handleSubmit} className="contato-form">
-              <div className="input-row">
-                <div style={{ width: "100%" }}>
+              <div className="linhaa">
+                <div className="campo">
                   <input
                     type="text"
                     name="nome"
                     placeholder="NOME"
-                    value={formData.nome}
-                    onChange={handleChange}
-                    className={errors.nome ? "input-error" : ""}
+                    value={dados.nome}
+                    onChange={alterar}
+                    className={erros.nome ? "erro" : ""}
                   />
+                  {erros.nome && <p className="msg-erro">{erros.nome}</p>}
                 </div>
-                <div style={{ width: "100%" }}>
+
+                <div className="campo">
                   <input
                     type="email"
                     name="email"
                     placeholder="EMAIL"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={errors.email ? "input-error" : ""}
+                    value={dados.email}
+                    onChange={alterar}
+                    className={erros.email ? "erro" : ""}
                   />
+                  {erros.email && <p className="msg-erro">{erros.email}</p>}
                 </div>
               </div>
-              {errors.nome && <span className="error-text">{errors.nome}</span>}
-              {errors.email && (
-                <span className="error-text">{errors.email}</span>
-              )}
 
-              <div className="input-row">
-                <div style={{ width: "100%" }}>
-                  <input
-                    type="tel"
-                    name="telefone"
-                    placeholder="NÚMERO DE CELULAR"
-                    value={formData.telefone}
-                    onChange={handleChange}
-                    className={errors.telefone ? "input-error" : ""}
-                  />
-                </div>
-                <div style={{ width: "100%" }}>
-                  <select
-                    name="servico"
-                    value={formData.servico}
-                    onChange={handleChange}
-                  >
-                    <option value="" disabled>
-                      SERVIÇO
-                    </option>
-                    <option value="instalacao-res">
-                      Instalação Residencial
-                    </option>
-                    <option value="instalacao-emp">
-                      Instalação Empresarial
-                    </option>
-                    <option value="manutencao">Manutenção Preventiva</option>
-                  </select>
-                </div>
+              <div className="linhaa">
+                <input
+                  type="tel"
+                  name="telefone"
+                  placeholder="TELEFONE"
+                  value={dados.telefone}
+                  onChange={alterar}
+                  className={erros.telefone ? "erro" : ""}
+                />
+
+                <select name="servico" value={dados.servico} onChange={alterar}>
+                  <option value="" disabled> SERVIÇO </option>
+                  <option value="residencial">Instalação Residencial</option>
+                  <option value="empresarial">Instalação Empresarial</option>
+                  <option value="manutencao">Manutenção</option>
+                </select>
               </div>
-              {errors.telefone && (
-                <span className="error-text">{errors.telefone}</span>
-              )}
+
+              {erros.telefone && <p className="msg-erro">{erros.telefone}</p>}
 
               <textarea
                 name="mensagem"
-                placeholder="DETALHES DA INSTALAÇÃO"
-                value={formData.mensagem}
-                onChange={handleChange}
-                className={errors.mensagem ? "input-error" : "input-mensagem"}
+                placeholder="DETALHES DO SERVIÇO"
+                value={dados.mensagem}
+                onChange={alterar}
                 rows="4"
+                className={erros.mensagem ? "erro" : ""}
               />
-              {errors.mensagem && (
-                <span className="error-text">{errors.mensagem}</span>
-              )}
 
-              <button type="submit" className="btn-enviar">
-                ENVIAR
-              </button>
+              {erros.mensagem && <p className="msg-erro">{erros.mensagem}</p>}
+
+              <button type="submit" className="botao-enviar">ENVIAR</button>
             </form>
           </div>
 
-          {/* Coluna Direita: Mapa */}
-          <div className="mapa-coluna">
-            <div id="google-map"></div>
+          {/* MAPA */}
+          <div className="coluna-mapa">
+            <div id="mapa"></div>
           </div>
         </div>
       </section>

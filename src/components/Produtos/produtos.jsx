@@ -3,7 +3,6 @@ import CardProdutos from "./Card_Produto/cardProdutos.jsx";
 import setaImg from "../image/setas/esquerdo.png";
 import "./produtos.css";
 
-// 1. Estrutura de DADOS Original (Simplificada para uso interno)
 const DADOS_ORIGINAL = {
   produtos: {
     label: "Produtos",
@@ -59,7 +58,6 @@ const Produtos = ({
 }) => {
   const listaRef = useRef(null);
 
-  // Usa a chave 'type' (ex: "produtos", "acessorios" ou "todos") no DADOS_FINAL
   const categoriaAtual = DADOS_FINAL[type] || { label: "Lista", itens: [] };
 
   const rolarLista = (direcao) => {
@@ -102,6 +100,10 @@ const Produtos = ({
               key={item.id}
               titulo={item.title}
               preco={item.price}
+              cardWidth="350px"
+              cardShadow="none"
+              imgHeight="300px"
+              cardGap="20px"
             />
           ))}
         </div>
