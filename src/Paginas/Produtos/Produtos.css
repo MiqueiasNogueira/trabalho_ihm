@@ -1,0 +1,53 @@
+#produtosPages {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  align-items: center;
+  align-items: end;
+  padding: 50px 50px 0px 30px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#produtosPages p {
+  max-width: 583px;
+  width: 100%;
+  height: 112px;
+  margin-top: 10px;
+}
+
+#produtosPages h1 {
+  font-size: 30px;
+}
+
+#filtroSelect {
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#produtosPages select {
+  border: none;
+  outline: none;
+  font-weight: 700;
+}
+#filtroSelect label {
+  font-size: 12px;
+}
+
+.titleProdutos {
+  margin-top: 10px;
+}
+#filtro span {
+  text-align: right;
+  margin-left: 70px;
+}
+
+@media (max-width: 768px) {
+  #filtro span {
+    text-align: right;
+    margin-left: 0px;
+  }
+}
