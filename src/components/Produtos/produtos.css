@@ -30,13 +30,11 @@
   display: none;
 }
 
-/* --- MODO GRID (PC) --- */
 .lista-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
-  gap: 20px; /* Aumentei um pouco no PC também para garantir */
   overflow-x: visible;
-  padding: 20px 10px;
+  padding: 0px 20px 0px 20px;
   justify-items: center;
 }
 

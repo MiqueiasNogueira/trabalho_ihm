@@ -1,6 +1,6 @@
 import "@fontsource/saira-stencil-one";
 import TopPages from "../../components/TopPages/top_pages.jsx";
-import "./produtos.css";
+import "../../components/Produtos/produtos.css";
 import Divisor from "../../components/Divisor/divisor.jsx";
 import Produtos from "../../components/Produtos/produtos.jsx";
 
@@ -34,7 +34,12 @@ function ProdutoPages() {
       </main>
       <Divisor marginTop="10px" marginBottom="" />
       <Produtos type="todos" isCarrossel={false} semFundo={true} />
-      <Divisor marginBottom="100px" tamanho="100%" espessura="1px" />
+      <Divisor
+        marginBottom="100px"
+        tamanho="100%"
+        marginTop="-30px"
+        espessura="1px"
+      />
     </div>
   );
 }

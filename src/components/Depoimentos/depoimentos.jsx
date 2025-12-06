@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Depoimentos.css";
+import "./depoimentos.css";
 
 const DADOS_DEPOIMENTOS = [
   {

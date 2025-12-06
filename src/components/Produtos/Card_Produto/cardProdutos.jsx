@@ -1,4 +1,4 @@
-import "./cardProdutos.css";
+import "./cardprodutos.css";
 import imgPadrao from "../../image/16.png";
 
 const CardProdutos = ({ titulo, preco, imagem = imgPadrao }) => {

@@ -67,6 +67,7 @@
   max-width: 260px;
   flex: none;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 480px) {
@@ -79,7 +80,7 @@
   .lista-grid .card-produto img {
     width: 100%;
     height: auto;
-    max-height: 110px;
+    max-height: 210px;
     object-fit: contain;
     margin-bottom: 2px;
   }

@@ -5,7 +5,7 @@ import App from "./App";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/trabalho_ihm/">
+    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/trabalho_ihm/"}>
       <App />
     </BrowserRouter>
   </StrictMode>
