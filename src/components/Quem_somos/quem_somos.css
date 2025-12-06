@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   scrollbar-width: none;
+  box-sizing: border-box;
 }
 
 #secao-quem-somos {
@@ -40,7 +41,6 @@
 
 .titulo {
   font-size: 2.5rem;
-  font-weight: 700;
   margin-bottom: 20px;
   color: #2e2e2e;
   font-family: "Saira Stencil One", cursive;

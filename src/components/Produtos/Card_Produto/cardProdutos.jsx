@@ -8,10 +8,10 @@ const CardProdutos = ({ titulo, preco, imagem = imgPadrao }) => {
       <div className="card-corpo">
         <h3>{titulo}</h3>
         <span>{preco}</span>
-        <button className="btn-comprar" type="button">
-          COMPRAR
-        </button>
       </div>
+      <button className="btn-comprar" type="button">
+        COMPRAR
+      </button>
     </article>
   );
 };
