@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser"; 
 import "./formulario_contato.css";
 import FundoCidade from "../image/fundo-cidade.png";
 
@@ -13,27 +14,35 @@ const FormularioContato = () => {
 
   const [erros, setErros] = useState({});
   const mapRef = useRef(null);
+  const formRef = useRef();
 
   const alterar = (e) => {
     const { name, value } = e.target;
-    setDados({ ...dados, [name]: value });
+    const mapaNomes = {
+        'user_name': 'nome',
+        'user_email': 'email',
+        'user_phone': 'telefone',
+        'service_type': 'servico',
+        'message': 'mensagem'
+    };
+    const chaveEstado = mapaNomes[name] || name;
 
-    if (erros[name]) {
-      setErros({ ...erros, [name]: null });
+    setDados({ ...dados, [chaveEstado]: value });
+
+    if (erros[chaveEstado]) {
+      setErros({ ...erros, [chaveEstado]: null });
     }
   };
 
   const validar = () => {
     const errosTemp = {};
-    let valido = true;
 
-    // Nome
+    let valido = true;
     if (!dados.nome.trim()) {
       errosTemp.nome = "Digite seu nome.";
       valido = false;
     }
 
-    // Email
     if (!dados.email.trim()) {
       errosTemp.email = "Digite seu e-mail.";
       valido = false;
@@ -42,13 +51,11 @@ const FormularioContato = () => {
       valido = false;
     }
 
-    // Telefone
     if (!dados.telefone.trim()) {
       errosTemp.telefone = "Digite seu telefone.";
       valido = false;
     }
 
-    // Mensagem
     if (!dados.mensagem.trim()) {
       errosTemp.mensagem = "Escreva sua mensagem.";
       valido = false;
@@ -59,13 +66,37 @@ const FormularioContato = () => {
   };
 
   const enviar = (e) => {
+    e.preventDefault();
+
     if (!validar()) {
-      e.preventDefault();
       return;
     }
+
+    emailjs
+      .sendForm(
+        'service_1rpoi5w',
+        'template_g07rode',
+        formRef.current,
+        '64glr4zlTOxAXcrTq'
+      )
+      .then(
+        () => {
+          alert('Mensagem enviada com sucesso!');
+          setDados({
+            nome: "",
+            email: "",
+            telefone: "",
+            servico: "",
+            mensagem: "",
+          });
+        },
+        (error) => {
+          console.error('ERRO:', error.text);
+          alert('Erro ao enviar mensagem. Tente novamente.');
+        },
+      );
   };
 
-  // MAPA
   useEffect(() => {
     const local = { lat: -14.227784, lng: -42.619647 };
     const element = document.getElementById("mapa");
@@ -111,25 +142,16 @@ const FormularioContato = () => {
             <span className="titulo-form">Contato</span>
 
             <form
-              action="https://formsubmit.co/miqueiasnogueirasantos567@gmail.com"
-              method="POST"
+              ref={formRef}
               onSubmit={enviar}
               className="form"
             >
-              {/* Anti-spam obrigatório no FormSubmit */}
-              <input type="hidden" name="_captcha" value="false" />
-              <input
-                type="hidden"
-                name="_subject"
-                value="Novo contato do site!"
-              />
-              <input type="hidden" name="_template" value="box" />
-
+              
               <div className="linhaa">
                 <div className="campo">
                   <input
                     type="text"
-                    name="nome"
+                    name="user_name"
                     placeholder="NOME"
                     value={dados.nome}
                     onChange={alterar}
@@ -141,7 +163,7 @@ const FormularioContato = () => {
                 <div className="campo">
                   <input
                     type="email"
-                    name="email"
+                    name="user_email"
                     placeholder="EMAIL"
                     value={dados.email}
                     onChange={alterar}
@@ -154,28 +176,31 @@ const FormularioContato = () => {
               <div className="linhaa">
                 <input
                   type="tel"
-                  name="telefone"
+                  name="user_phone"
                   placeholder="TELEFONE"
                   value={dados.telefone}
                   onChange={alterar}
                   className={erros.telefone ? "erro" : ""}
                 />
 
-                <select name="servico" value={dados.servico} onChange={alterar}>
+                <select 
+                    name="service_type"
+                    value={dados.servico} 
+                    onChange={alterar}
+                >
                   <option value="" disabled>
-                    {" "}
-                    SERVIÇO{" "}
+                    SERVIÇO
                   </option>
-                  <option value="residencial">Instalação Residencial</option>
-                  <option value="empresarial">Instalação Empresarial</option>
-                  <option value="manutencao">Manutenção</option>
+                  <option value="Instalação Residencial">Instalação Residencial</option>
+                  <option value="Instalação Empresarial">Instalação Empresarial</option>
+                  <option value="Manutenção">Manutenção</option>
                 </select>
               </div>
 
               {erros.telefone && <p className="msg-erro">{erros.telefone}</p>}
 
               <textarea
-                name="mensagem"
+                name="message"
                 placeholder="DETALHES DO SERVIÇO"
                 value={dados.mensagem}
                 onChange={alterar}
