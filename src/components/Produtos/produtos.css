@@ -36,6 +36,7 @@
   overflow-x: visible;
   padding: 0px 20px 0px 20px;
   justify-items: center;
+  margin-bottom: 10px;
 }
 
 .btn-seta {
@@ -89,7 +90,7 @@
 
   .lista-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px 12px;
+    gap: 20px 1px;
     justify-items: stretch;
     padding: 20px 5px;
   }
