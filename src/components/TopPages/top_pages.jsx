@@ -6,7 +6,7 @@ const top_pages = ({ title }) => {
     <div id="topPages">
       <img src={ImgTop} alt="" />
       <div>
-        <h1 id="topTitle">{title}</h1>
+        <span id="topTitle">{title}</span>
       </div>
     </div>
   );

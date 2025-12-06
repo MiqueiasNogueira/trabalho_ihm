@@ -2,7 +2,7 @@ import Menu from "./components/Menu/menu.jsx";
 import Footer from "./components/Footer/footer.jsx";
 import Home from "./Paginas/Home.jsx";
 import Contato from "./Paginas/Contato.jsx";
-import Sobre from "./Paginas/Sobre.jsx";
+import Sobre from "./Paginas/SobreNosPagina/Sobre-nos.jsx";
 import { Routes, Route } from "react-router-dom";
 import "@fontsource/saira-stencil-one";
 import Produtos from "./Paginas/Produtos/Produtos.jsx";

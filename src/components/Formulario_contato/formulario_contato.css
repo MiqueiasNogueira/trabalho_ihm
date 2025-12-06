@@ -30,15 +30,15 @@
   padding: 40px;
   display: flex;
   flex-direction: column;
+  font-family: "Saira Stencil One", system-ui, sans-serif;
 }
 
 .titulo-form {
   font-family: "Saira Stencil One", cursive;
   font-size: 3rem;
-  font-weight: 700;
-  color: black;
+  color: rgb(255, 255, 255);
   margin-bottom: 20px;
-  text-shadow: 2px 2px 0 #fff;
+  text-shadow: 5px 4px 0 #000000;
 }
 
 .form input,
@@ -64,7 +64,6 @@
   width: 100%;
 }
 
-
 textarea {
   resize: none;
 }
@@ -80,10 +79,9 @@ textarea {
 }
 
 .erro-email {
-    margin-top: 43px;
-    display: block;
+  margin-top: 43px;
+  display: block;
 }
-
 
 .botao-enviar {
   padding: 12px 30px;

@@ -10,7 +10,7 @@ function ProdutoPages() {
       <TopPages title="Nossos produtos" />
       <main id="produtosPages">
         <section id="topProdutos">
-          <h1>Shop</h1>
+          <span>Shop</span>
           <p>
             As melhores câmeras de segurança do mercado à sua disposição, com
             garantia de qualidade e entrega rápida em até 3 dias úteis. Garanta

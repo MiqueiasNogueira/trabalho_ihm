@@ -21,9 +21,9 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#produtosPages h1 {
+#produtosPages #topProdutos span {
   font-size: 36px;
-  font-family: "Impact", sans-serif;
+  font-family: "Saira Stencil One", system-ui, sans-serif;
 }
 
 #filtroSelect {

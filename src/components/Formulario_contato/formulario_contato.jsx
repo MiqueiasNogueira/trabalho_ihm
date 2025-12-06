@@ -23,41 +23,40 @@ const FormularioContato = () => {
     }
   };
 
-const validar = () => {
-  const errosTemp = {};
-  let valido = true;
+  const validar = () => {
+    const errosTemp = {};
+    let valido = true;
 
-  // Nome
-  if (!dados.nome.trim()) {
-    errosTemp.nome = "Digite seu nome.";
-    valido = false;
-  }
+    // Nome
+    if (!dados.nome.trim()) {
+      errosTemp.nome = "Digite seu nome.";
+      valido = false;
+    }
 
-  // Email
-  if (!dados.email.trim()) {
-    errosTemp.email = "Digite seu e-mail.";
-    valido = false;
-  } else if (!/\S+@\S+\.\S+/.test(dados.email)) {
-    errosTemp.email = "E-mail inválido.";
-    valido = false;
-  }
+    // Email
+    if (!dados.email.trim()) {
+      errosTemp.email = "Digite seu e-mail.";
+      valido = false;
+    } else if (!/\S+@\S+\.\S+/.test(dados.email)) {
+      errosTemp.email = "E-mail inválido.";
+      valido = false;
+    }
 
-  // Telefone
-  if (!dados.telefone.trim()) {
-    errosTemp.telefone = "Digite seu telefone.";
-    valido = false;
-  }
+    // Telefone
+    if (!dados.telefone.trim()) {
+      errosTemp.telefone = "Digite seu telefone.";
+      valido = false;
+    }
 
-  // Mensagem
-  if (!dados.mensagem.trim()) {
-    errosTemp.mensagem = "Escreva sua mensagem.";
-    valido = false;
-  }
+    // Mensagem
+    if (!dados.mensagem.trim()) {
+      errosTemp.mensagem = "Escreva sua mensagem.";
+      valido = false;
+    }
 
-  setErros(errosTemp);
-  return valido;
-};
-
+    setErros(errosTemp);
+    return valido;
+  };
 
   const enviar = (e) => {
     if (!validar()) {
@@ -109,7 +108,7 @@ const validar = () => {
         <div className="contato-caixa">
           {/* FORMULÁRIO */}
           <div className="coluna-form">
-            <h2 className="titulo-form">Contato</h2>
+            <span className="titulo-form">Contato</span>
 
             <form
               action="https://formsubmit.co/miqueiasnogueirasantos567@gmail.com"
@@ -119,7 +118,11 @@ const validar = () => {
             >
               {/* Anti-spam obrigatório no FormSubmit */}
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_subject" value="Novo contato do site!" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="Novo contato do site!"
+              />
               <input type="hidden" name="_template" value="box" />
 
               <div className="linhaa">
@@ -159,7 +162,10 @@ const validar = () => {
                 />
 
                 <select name="servico" value={dados.servico} onChange={alterar}>
-                  <option value="" disabled> SERVIÇO </option>
+                  <option value="" disabled>
+                    {" "}
+                    SERVIÇO{" "}
+                  </option>
                   <option value="residencial">Instalação Residencial</option>
                   <option value="empresarial">Instalação Empresarial</option>
                   <option value="manutencao">Manutenção</option>
@@ -179,7 +185,9 @@ const validar = () => {
 
               {erros.mensagem && <p className="msg-erro">{erros.mensagem}</p>}
 
-              <button type="submit" className="botao-enviar">ENVIAR</button>
+              <button type="submit" className="botao-enviar">
+                ENVIAR
+              </button>
             </form>
           </div>
 

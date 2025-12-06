@@ -65,7 +65,7 @@ const Depoimentos = () => {
       <div className="depoimentos__curve"></div>
 
       <div className="depoimentos__container">
-        <h2 className="depoimentos__title">DEPOIMENTOS</h2>
+        <span className="depoimentos__title">DEPOIMENTOS</span>
 
         <div className="depoimentos__content">
           <button
