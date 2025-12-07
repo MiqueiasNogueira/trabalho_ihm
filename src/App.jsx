@@ -5,6 +5,8 @@ import Contato from "./Paginas/Contato.jsx";
 import Sobre from "./Paginas/SobreNosPagina/Sobre-nos.jsx";
 import { Routes, Route } from "react-router-dom";
 import "@fontsource/saira-stencil-one";
+import "@fontsource/inter";
+
 import Produtos from "./Paginas/Produtos/produtos.jsx";
 
 function App() {

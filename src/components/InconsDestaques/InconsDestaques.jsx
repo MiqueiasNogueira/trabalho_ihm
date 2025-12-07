@@ -10,28 +10,32 @@ const InconsDestaques = () => {
   return (
     <section>
       <div id="IconsDestaques">
-        <div className="AreaDestaques">
-          <div className="iconsCards">
-            <img id="CameraIcon" src={CameraIcon} alt="" />
+        <ul className="AreaDestaques">
+          <li className="iconsCards">
+            <img id="CameraIcon" src={CameraIcon} alt="Ícone de Câmera" />
             <span>Camera de Segurança</span>
-          </div>
-          <div className="iconsCards">
-            <img id="TvIcon" src={TvIcon} alt="" />
+          </li>
+          <li className="iconsCards">
+            <img id="TvIcon" src={TvIcon} alt="Ícone de TV" />
             <span>Camera de Segurança</span>
-          </div>
-          <div className="iconsCards">
-            <img id="PlayIcon" src={PlayIcon} alt="" />
+          </li>
+          <li className="iconsCards">
+            <img id="PlayIcon" src={PlayIcon} alt="Ícone de Play" />
             <span>Camera de Segurança</span>
-          </div>
-          <div className="iconsCards">
-            <img id="AntenaIcon" src={AntenaIcon} alt="" />
+          </li>
+          <li className="iconsCards">
+            <img id="AntenaIcon" src={AntenaIcon} alt="Ícone de Antena" />
             <span>Camera de Segurança</span>
-          </div>
-          <div className="iconsCards">
-            <img id="IgrenagemIcon" src={IgrenagemIcon} alt="" />
+          </li>
+          <li className="iconsCards">
+            <img
+              id="IgrenagemIcon"
+              src={IgrenagemIcon}
+              alt="Ícone de Configuração"
+            />
             <span>Camera de Segurança</span>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
   );

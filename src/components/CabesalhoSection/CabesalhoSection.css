@@ -29,3 +29,12 @@
   font-size: 30px;
   text-shadow: 0 4px 0 #ff7a00;
 }
+@media (max-width: 724px) {
+  .textSection {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  #cabecalhoSection {
+    border-radius: 0px;
+  }
+}

@@ -35,6 +35,15 @@
   text-align: center;
 }
 
+.depoimentos__figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .depoimentos__title {
   position: absolute;
   top: 200px;
@@ -45,6 +54,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   z-index: 2;
+  font-weight: normal;
 }
 
 .depoimentos__text {
@@ -54,6 +64,8 @@
   color: #333;
   line-height: 1.6;
   font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
 }
 
 .depoimentos__content {
@@ -86,6 +98,13 @@
 .author__info {
   font-size: 1rem;
   color: #333;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+}
+
+.author__name {
+  font-style: normal;
+  font-weight: bold;
 }
 
 .btn-nav {

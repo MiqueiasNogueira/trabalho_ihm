@@ -20,3 +20,13 @@
   margin-left: 10px;
   font-family: "Saira Stencil One", system-ui, sans-serif;
 }
+
+@media (max-width: 754px) {
+  .cabecalho span {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  .cabecalho {
+    height: 69px;
+  }
+}

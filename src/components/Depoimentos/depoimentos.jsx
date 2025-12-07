@@ -38,6 +38,7 @@ const SetaNavegacao = ({ direcao }) => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    aria-hidden="true"
   >
     {direcao === "prev" ? (
       <path d="M15 18l-6-6 6-6" />
@@ -61,40 +62,46 @@ const Depoimentos = () => {
   };
 
   return (
-    <section className="depoimentos">
+    <section className="depoimentos" aria-label="Depoimentos de Clientes">
       <div className="depoimentos__curve"></div>
 
       <div className="depoimentos__container">
-        <span className="depoimentos__title">DEPOIMENTOS</span>
+        <h2 className="depoimentos__title">DEPOIMENTOS</h2>
 
-        <div className="depoimentos__content">
-          <button
-            onClick={() => navegar("anterior")}
-            className="btn-nav btn-prev"
-            aria-label="Anterior"
-          >
-            <SetaNavegacao direcao="prev" />
-          </button>
+        <figure className="depoimentos__figure">
+          <div className="depoimentos__content">
+            <button
+              onClick={() => navegar("anterior")}
+              className="btn-nav btn-prev"
+              aria-label="Depoimento anterior"
+            >
+              <SetaNavegacao direcao="prev" />
+            </button>
 
-          <p className="depoimentos__text fade-in" key={indice}>
-            {texto}
-          </p>
+            <blockquote className="depoimentos__text fade-in" key={indice}>
+              "{texto}"
+            </blockquote>
 
-          <button
-            onClick={() => navegar("proximo")}
-            className="btn-nav btn-next"
-            aria-label="Próximo"
-          >
-            <SetaNavegacao direcao="next" />
-          </button>
-        </div>
-
-        <div className="depoimentos__author fade-in" key={`auth-${indice}`}>
-          <img src={foto} alt={nome} className="author__img" />
-          <div className="author__info">
-            <strong>{nome}</strong>, {cargo}
+            <button
+              onClick={() => navegar("proximo")}
+              className="btn-nav btn-next"
+              aria-label="Próximo depoimento"
+            >
+              <SetaNavegacao direcao="next" />
+            </button>
           </div>
-        </div>
+
+          <figcaption
+            className="depoimentos__author fade-in"
+            key={`auth-${indice}`}
+          >
+            <img src={foto} alt={`Foto de ${nome}`} className="author__img" />
+            <div className="author__info">
+              <cite className="author__name">{nome}</cite>
+              <span className="author__role">, {cargo}</span>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </section>
   );

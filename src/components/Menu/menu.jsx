@@ -16,7 +16,9 @@ const Menu = () => {
     <nav id="menu">
       <div id="menu-content">
         <div id="logo">
-          <img src={logo} alt="Logo" />
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
         </div>
 
         <button
