@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#secao-servicos {
+  background-color: #ffffff;
+  padding: 90px 20px;
+  font-family: "Arial", sans-serif;
+  color: #000000;
+}
+
+.servicos {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.titulo-wrapper {
+  display: 600px;
+  flex-direction: 40px;
+  text-align: left;
+}
+
+.titulo {
+  font-size: 50px;
+  color: #000000;
+  margin: 0;
+  font-family: "Saira Stencil One", system-ui, sans-serif;
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+  color: #969696;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.servico-card {
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #c7c5c5;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.servico-icone-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.servico-card h3 {
+  font-size: 1.3rem;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.servico-card p {
+  font-size: 0.95rem;
+  color: #6b6868;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.servico-cta {
+  color: #ff6900;
+  text-decoration: none;
+  font-weight: 700;
+
+  margin-top: auto;
+  transition: color 0.3s;
+}
+
+.servico-cta:hover {
+  color: #ffa500;
+}
+
+/* ------------------ Responsividade ------------------ */
+
+@media (max-width: 1050px) {
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .titulo-wrapper {
+    text-align: center;
+  }
+
+  .servico-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .servicos-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn-ver-mais {
+    margin-top: 20px;
+  }
+}

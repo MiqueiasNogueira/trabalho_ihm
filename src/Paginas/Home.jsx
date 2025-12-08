@@ -14,6 +14,7 @@ import DuvidasFrequentes from "../components/Duvidas_frequentes/duvidas_frequent
 import Depoimentos from "../components/Depoimentos/depoimentos.jsx";
 import "@fontsource/saira-stencil-one";
 
+
 function Home() {
   const location = useLocation();
   useEffect(() => {

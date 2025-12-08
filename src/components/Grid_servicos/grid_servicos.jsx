@@ -1,6 +1,7 @@
 import React from "react";
 import "./grid_servicos.css";
 import IconeCasa from "../image/icons/casa.png";
+import { Link } from "react-router-dom";
 
 const Grid_Servicos = () => {
   return (
@@ -14,9 +15,9 @@ const Grid_Servicos = () => {
               <br /> compromisso.
             </p>
           </div>
-          <a href="/servicos" className="ver-mais">
+          <Link to="/servicos" className="ver-mais">
             VER MAIS
-          </a>
+          </Link>
         </header>
 
         <div className="servicos-grid">
@@ -31,9 +32,9 @@ const Grid_Servicos = () => {
               Instalação completa e configuração de sistemas de monitoramento
               para casas, garantindo a proteção da sua família e do patrimônio.
             </p>
-            <a href="#" className="servico-cta">
+            <Link to="Contato" className="servico-cta">
               SOLICITAR SERVIÇO →
-            </a>
+            </Link>
           </div>
 
           <div className="servico-card">
@@ -48,9 +49,9 @@ const Grid_Servicos = () => {
               estabelecimentos comerciais, com foco em monitoramento
               estratégico.
             </p>
-            <a href="#" className="servico-cta">
+            <Link to="Contato" className="servico-cta">
               SOLICITAR SERVIÇO →
-            </a>
+            </Link>
           </div>
 
           {/* Card 3: Manutenção Preventiva */}
@@ -66,9 +67,9 @@ const Grid_Servicos = () => {
               hardware e software, assegurando o funcionamento ininterrupto do
               seu sistema.
             </p>
-            <a href="#" className="servico-cta">
+            <Link to="Contato" className="servico-cta">
               SOLICITAR SERVIÇO →
-            </a>
+            </Link>
           </div>
 
           {/* Card 4: Configuração Remota */}
@@ -84,9 +85,9 @@ const Grid_Servicos = () => {
               visualização e controle total das câmeras de qualquer lugar via
               aplicativo.
             </p>
-            <a href="#" className="servico-cta">
+            <Link to="COntato" className="servico-cta">
               SOLICITAR SERVIÇO →
-            </a>
+            </Link>
           </div>
 
           {/* Card 5: Venda De Equipamentos */}
@@ -101,9 +102,9 @@ const Grid_Servicos = () => {
               Câmeras, DVRs, NVRs e acessórios de alta qualidade (Full HD, 4K,
               Wi-Fi). Venda direta com suporte técnico especializado.
             </p>
-            <a href="#" className="servico-cta">
+            <Link to="Contato" className="servico-cta">
               SOLICITAR SERVIÇO →
-            </a>
+            </Link>
           </div>
 
           {/* Card 6: Suporte Técnico 24/7 */}
@@ -119,7 +120,7 @@ const Grid_Servicos = () => {
               de conexão ou dúvidas, disponível 24 horas por dia, 7 dias por
               semana.
             </p>
-            <a href="#" className="servico-cta">
+            <a href="Contato" className="servico-cta">
               SOLICITAR SERVIÇO →
             </a>
           </div>
