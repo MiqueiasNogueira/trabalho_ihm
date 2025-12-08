@@ -23,8 +23,8 @@ function ProdutoPages() {
             <label for="item-type-select">PRODUTOS:</label>
             <select id="item-type-select" onchange="filterItems(this.value)">
               <option value="all">TODOS</option>
-              <option value="produto">CAMERAS</option>
-              <option value="acessorio">ACESSORIOS</option>
+              <option value="produto">CÂMERAS</option>
+              <option value="acessorio">ACESSÓRIOS</option>
             </select>
           </form>
           <span className="titleProdutos">

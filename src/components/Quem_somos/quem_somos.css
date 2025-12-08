@@ -102,9 +102,17 @@
 /* ------------------ Responsividade (Mobile) ------------------ */
 
 @media (max-width: 850px) {
+  #secao-quem-somos {
+    padding: 40px 15px;
+  }
+
   .quem-somos-container {
     flex-direction: column;
     gap: 20px;
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    gap: 10px;
   }
 
   .coluna-midia {
@@ -114,6 +122,14 @@
   .coluna {
     order: 2;
     padding-top: 20px;
+  }
+
+    .coluna-midia img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .titulo {
@@ -127,6 +143,9 @@
   .estatisticas {
     justify-content: space-around;
     padding-right: 0;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   }
 
   .btn-saiba-mais {

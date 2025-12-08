@@ -41,9 +41,9 @@ function SOBRE() {
           <div className="sobre-text-box box-dois">
             <p>Atualmente, a MikService oferece:</p>
             <ul>
-              <li>- Instalação de câmeras de segurança;</li>
-              <li>- Venda de acessórios especializados;</li>
-              <li>- Manutenção completa após a instalação.</li>
+              <li>Instalação de câmeras de segurança;</li>
+              <li>Venda de acessórios especializados;</li>
+              <li>Manutenção completa após a instalação.</li>
             </ul>
             <p>
               Nosso foco é atender clientes que buscam soluções eficazes e
