@@ -1,0 +1,112 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Escopo da página Nossos Serviços */
+#secao-servicos.pagina-servicos {
+  background: #fff;
+  padding: 60px 20px;
+  font-family: "Arial", sans-serif;
+  color: #000;
+}
+
+.header {
+  margin-bottom: 0px;
+}
+
+/* Divisor colado nos cards */
+.pagina-servicos .divisor {
+  margin: 66660px 660666 26066px 660; 
+}
+
+/* Container */
+.servicos {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.pagina-servicos .header {
+  margin-bottom: 20px; /* reduz espaçamento para colar no divisor */
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+  color: #969696;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* GRID */
+.pagina-servicos .servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.servico-card {
+  padding: 30px;
+  border: 1px solid #d4d4d4;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ícone */
+.servico-icone-img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+/* Título e Texto */
+.servico-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.servico-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* Botão */
+.servico-cta {
+  margin-top: auto;
+  font-weight: 700;
+  color: #ff6900;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.servico-cta:hover {
+  color: #ffa040;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1050px) {
+  .pagina-servicos .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .pagina-servicos .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-servicos .header {
+    text-align: center;
+  }
+
+  .servico-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

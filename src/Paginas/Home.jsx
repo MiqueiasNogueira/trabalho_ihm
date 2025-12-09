@@ -14,6 +14,7 @@ import DuvidasFrequentes from "../components/Duvidas_frequentes/duvidas_frequent
 import Depoimentos from "../components/Depoimentos/depoimentos.jsx";
 import "@fontsource/saira-stencil-one";
 
+
 function Home() {
   const location = useLocation();
   useEffect(() => {
@@ -37,9 +38,9 @@ function Home() {
       <InconsDestaques />
       <Quem_Somos />
       <CabesalhoSection title="NOSSOS PRODUTOS " />
-      <CabecalhoItem title="Camera" />
+      <CabecalhoItem title="Câmera" />
       <Produtos type="produtos" />
-      <CabecalhoItem title="Acessorio" />
+      <CabecalhoItem title="Acessórios" />
       <Produtos type="acessorios" />
       <Grid_Servicos />
       <Depoimentos />
