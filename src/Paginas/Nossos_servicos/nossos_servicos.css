@@ -1,39 +1,36 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#secao-servicos {
-  background-color: #ffffff;
-  padding: 90px 20px;
+/* Escopo da página Nossos Serviços */
+#secao-servicos.pagina-servicos {
+  background: #fff;
+  padding: 60px 20px;
   font-family: "Arial", sans-serif;
-  color: #000000;
-}
-
-.servicos {
-  margin: 0 auto;
-  max-width: 1200px;
+  color: #000;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 0px;
 }
 
-.titulo-wrapper {
-  display: 600px;
-  flex-direction: 40px;
-  text-align: left;
+/* Divisor colado nos cards */
+.pagina-servicos .divisor {
+  margin: 66660px 660666 26066px 660; 
 }
 
-.titulo {
-  font-size: 50px;
-  color: #000000;
-  margin: 0;
-  font-family: "Saira Stencil One", system-ui, sans-serif;
+/* Container */
+.servicos {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.pagina-servicos .header {
+  margin-bottom: 20px; /* reduz espaçamento para colar no divisor */
 }
 
 .subtitulo {
@@ -43,91 +40,73 @@
   line-height: 1.5;
 }
 
-
-.servicos-grid {
+/* GRID */
+.pagina-servicos .servicos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .servico-card {
   padding: 30px;
-  background-color: #ffffff;
-  border: 1px solid #c7c5c5;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-
+  border: 1px solid #d4d4d4;
+  background: #fff;
   display: flex;
   flex-direction: column;
 }
 
+/* Ícone */
 .servico-icone-img {
   width: 50px;
   height: 50px;
-  object-fit: contain;
   margin-bottom: 15px;
 }
 
+/* Título e Texto */
 .servico-card h3 {
   font-size: 1.3rem;
-  color: #000000;
   margin-bottom: 15px;
 }
 
 .servico-card p {
   font-size: 0.95rem;
-  color: #6b6868;
+  color: #666;
   line-height: 1.5;
   flex-grow: 1;
 }
 
+/* Botão */
 .servico-cta {
+  margin-top: auto;
+  font-weight: 700;
   color: #ff6900;
   text-decoration: none;
-  font-weight: 700;
-
-  margin-top: auto;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 
 .servico-cta:hover {
-  color: #ffa500;
+  color: #ffa040;
 }
 
-/* ------------------ Responsividade ------------------ */
-
+/* RESPONSIVIDADE */
 @media (max-width: 1050px) {
-  .servicos-grid {
+  .pagina-servicos .servicos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 650px) {
-  .servicos-grid {
+  .pagina-servicos .servicos-grid {
     grid-template-columns: 1fr;
   }
 
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: center;
-  }
-
-  .titulo-wrapper {
+  .pagina-servicos .header {
     text-align: center;
   }
 
   .servico-card {
     width: 90%;
     margin: 0 auto;
-  }
-
-  .servicos-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .btn-ver-mais {
-    margin-top: 20px;
   }
 }
