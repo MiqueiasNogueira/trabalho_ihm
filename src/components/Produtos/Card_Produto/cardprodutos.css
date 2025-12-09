@@ -19,7 +19,7 @@
   object-fit: contain;
 }
 
-.card-corpo {
+.card-texto {
   padding: 10px 14px 14px;
   width: 100%;
   flex: 1;
@@ -29,14 +29,14 @@
   background: #ffffff;
 }
 
-.card-corpo h3 {
+.card-texto h3 {
   font-size: 20px;
   color: #000;
   margin: 0 0 5px 0;
   line-height: 1.3;
 }
 
-.card-corpo span {
+.card-texto span {
   font-size: 20px;
   color: #000;
   font-weight: bold;
@@ -60,6 +60,7 @@
 
 .btn-comprar:hover {
   opacity: 0.9;
+  background: #267700;
 }
 
 .lista-grid .card-produto {
@@ -86,7 +87,7 @@
     margin-bottom: 2px;
   }
 
-  .lista-grid .card-corpo {
+  .lista-grid .card-texto {
     padding: 8px 10px 12px 10px;
     gap: 5px;
     display: flex;
@@ -97,14 +98,14 @@
     flex: 1;
   }
 
-  .lista-grid .card-corpo h3 {
+  .lista-grid .card-texto h3 {
     font-size: 13px;
     margin: 0;
     line-height: 1.2;
     width: 100%;
   }
 
-  .lista-grid .card-corpo span {
+  .lista-grid .card-texto span {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 6px;

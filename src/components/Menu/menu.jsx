@@ -31,24 +31,24 @@ const Menu = () => {
 
         <ul className={open ? "menu-links open" : "menu-links"}>
           <li>
-            <Link to="/">HOME</Link>{" "}
+            <Link to="/">HOME</Link>
           </li>
           <li>
             <Link to="/sobre">SOBRE</Link>
           </li>
           <li>
-            <Link to="/produtos">PRODUTOS</Link>{" "}
+            <Link to="/produtos">PRODUTOS</Link>
           </li>
           <li>
-            <Link to="/servicos">SERVIÇOS</Link>{" "}
+            <Link to="/servicos">SERVIÇOS</Link>
           </li>
           <li className="item-contato-mobile">
-            <Link to="/contato">CONTATO</Link>{" "}
+            <Link to="/contato">CONTATO</Link>
           </li>
         </ul>
         <div id="botoes">
           <button className="btnContato">
-            <Link to="/contato">Whatzapp</Link>{" "}
+            <Link to="/contato">Whatzapp</Link>
           </button>
           <LuSun className="icon-sun" />
         </div>
