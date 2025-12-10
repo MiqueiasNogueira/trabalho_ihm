@@ -14,13 +14,13 @@ function App() {
   return (
     <div className="site-container">
       <Menu />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sobre" element={<Sobre />} />
-        <Route path="/produtos" element={<Produtos />} />
-        <Route path="/servicos" element={<Servicos />} />
-        <Route path="/contato" element={<Contato />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="sobre" element={<Sobre />} />
+          <Route path="produtos" element={<Produtos />} />
+          <Route path="servicos" element={<Servicos />} />
+          <Route path="contato" element={<Contato />} />
+        </Routes>
       <Footer />
     </div>
   );
