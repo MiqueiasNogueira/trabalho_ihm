@@ -48,11 +48,7 @@ const Menu = () => {
         </ul>
         <div id="botoes">
           <button className="btnContato">
-<<<<<<< HEAD
-            <Link to="/contato">Whatzapp</Link>
-=======
             <Link to="/contato">WhatzApp</Link>{" "}
->>>>>>> 8f5ea7b0c0ba38b105c4a279fd20c0a4939ab652
           </button>
           <LuSun className="icon-sun" />
         </div>
