@@ -13,10 +13,6 @@
   color: #000;
 }
 
-.header {
-  margin-bottom: 0px;
-}
-
 /* Container */
 .servicos {
   max-width: 1200px;
@@ -25,50 +21,7 @@
 
 /* Header */
 .pagina-servicos .header {
-  margin-bottom: 20px; /* reduz espaçamento para colar no divisor */
-}
-
-.subtitulo {
-  font-size: 1.1rem;
-  color: #969696;
-  margin-top: 10px;
-  line-height: 1.5;
-}
-
-/* GRID */
-.pagina-servicos .servicos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 10px;
-}
-
-.servico-card {
-  padding: 30px;
-  border: 1px solid #d4d4d4;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Ícone */
-.servico-icone-img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 15px;
-}
-
-/* Título e Texto */
-.servico-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-}
-
-.servico-card p {
-  font-size: 0.95rem;
-  color: #666;
-  line-height: 1.5;
-  flex-grow: 1;
+  margin-bottom: 20px;
 }
 
 /* Botão */
